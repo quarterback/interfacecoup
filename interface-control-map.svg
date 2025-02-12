@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc" />
+  
+  <!-- Interface Control Points (Top) -->
+  <g transform="translate(0, 50)">
+    <rect x="150" y="0" width="500" height="80" rx="8" fill="#e2e8f0" />
+    <text x="400" y="30" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold">Interface Control Layer</text>
+    
+    <!-- Interface Nodes -->
+    <g transform="translate(180, 45)">
+      <circle cx="0" cy="0" r="15" fill="#3b82f6" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Admin</text>
+    </g>
+    
+    <g transform="translate(400, 45)">
+      <circle cx="0" cy="0" r="15" fill="#3b82f6" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Platform</text>
+    </g>
+    
+    <g transform="translate(620, 45)">
+      <circle cx="0" cy="0" r="15" fill="#3b82f6" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Access</text>
+    </g>
+  </g>
+
+  <!-- Mediation Layer (Middle) -->
+  <g transform="translate(0, 250)">
+    <rect x="150" y="0" width="500" height="100" rx="8" fill="#e2e8f0" />
+    <text x="400" y="30" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold">Mediation Layer</text>
+    
+    <!-- Mediation Nodes -->
+    <g transform="translate(180, 60)">
+      <circle cx="0" cy="0" r="15" fill="#64748b" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Process</text>
+    </g>
+    
+    <g transform="translate(400, 60)">
+      <circle cx="0" cy="0" r="15" fill="#64748b" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Data</text>
+    </g>
+    
+    <g transform="translate(620, 60)">
+      <circle cx="0" cy="0" r="15" fill="#64748b" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Rules</text>
+    </g>
+  </g>
+
+  <!-- Infrastructure Layer (Bottom) -->
+  <g transform="translate(0, 450)">
+    <rect x="150" y="0" width="500" height="80" rx="8" fill="#e2e8f0" />
+    <text x="400" y="30" text-anchor="middle" font-family="system-ui" font-size="16" font-weight="bold">Infrastructure Layer</text>
+    
+    <!-- Infrastructure Nodes -->
+    <g transform="translate(180, 45)">
+      <circle cx="0" cy="0" r="15" fill="#475569" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Systems</text>
+    </g>
+    
+    <g transform="translate(400, 45)">
+      <circle cx="0" cy="0" r="15" fill="#475569" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Resources</text>
+    </g>
+    
+    <g transform="translate(620, 45)">
+      <circle cx="0" cy="0" r="15" fill="#475569" />
+      <text x="0" y="35" text-anchor="middle" font-family="system-ui" font-size="12">Services</text>
+    </g>
+  </g>
+
+  <!-- Connection Lines -->
+  <!-- Top to Middle -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="180" y1="95" x2="180" y2="310" />
+    <line x1="400" y1="95" x2="400" y2="310" />
+    <line x1="620" y1="95" x2="620" y2="310" />
+    
+    <!-- Cross connections -->
+    <line x1="180" y1="95" x2="400" y2="310" stroke-dasharray="4" />
+    <line x1="400" y1="95" x2="620" y2="310" stroke-dasharray="4" />
+  </g>
+
+  <!-- Middle to Bottom -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="180" y1="310" x2="180" y2="495" />
+    <line x1="400" y1="310" x2="400" y2="495" />
+    <line x1="620" y1="310" x2="620" y2="495" />
+    
+    <!-- Cross connections -->
+    <line x1="180" y1="310" x2="400" y2="495" stroke-dasharray="4" />
+    <line x1="400" y1="310" x2="620" y2="495" stroke-dasharray="4" />
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(20, 20)">
+    <rect width="120" height="100" rx="4" fill="white" stroke="#e2e8f0" />
+    <text x="10" y="25" font-family="system-ui" font-size="12" font-weight="bold">Legend</text>
+    
+    <circle cx="20" cy="45" r="6" fill="#3b82f6" />
+    <text x="35" y="48" font-family="system-ui" font-size="10">Control Points</text>
+    
+    <circle cx="20" cy="65" r="6" fill="#64748b" />
+    <text x="35" y="68" font-family="system-ui" font-size="10">Mediation</text>
+    
+    <circle cx="20" cy="85" r="6" fill="#475569" />
+    <text x="35" y="88" font-family="system-ui" font-size="10">Infrastructure</text>
+  </g>
+</svg>
