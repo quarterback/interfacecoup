@@ -66,6 +66,136 @@
                 </div>
             </section>
 
+            <!--Diagrams -->
+            
+    <main class="py-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Crisis Cascade Patterns</h1>
+                <p class="text-xl text-gray-600">
+                    How system failures compound and accelerate each other, creating cyclical patterns of degradation
+                </p>
+            </header>
+
+            <!-- SVG Visualization -->
+            <div class="bg-white p-8 rounded-lg shadow-sm mb-12">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" class="w-full h-auto">
+                    <!-- Background -->
+                    <rect width="100%" height="100%" fill="#f8f9fa"/>
+                    
+                    <!-- Central Crisis Hub -->
+                    <circle cx="500" cy="300" r="80" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+                    <text x="500" y="290" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Initial System</text>
+                    <text x="500" y="310" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold">Failure</text>
+
+                    <!-- First Level Cascades -->
+                    <g class="cascade-level-1">
+                        <!-- Infrastructure Failure -->
+                        <circle cx="300" cy="150" r="60" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+                        <text x="300" y="140" text-anchor="middle" fill="#d97706" font-size="14">Infrastructure</text>
+                        <text x="300" y="160" text-anchor="middle" fill="#d97706" font-size="14">Degradation</text>
+                        <path d="M 435 250 Q 370 200 350 190" fill="none" stroke="#d97706" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                        <!-- Administrative Failure -->
+                        <circle cx="700" cy="150" r="60" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+                        <text x="700" y="140" text-anchor="middle" fill="#4f46e5" font-size="14">Administrative</text>
+                        <text x="700" y="160" text-anchor="middle" fill="#4f46e5" font-size="14">Collapse</text>
+                        <path d="M 565 250 Q 630 200 650 190" fill="none" stroke="#4f46e5" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                        <!-- Knowledge Loss -->
+                        <circle cx="300" cy="450" r="60" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+                        <text x="300" y="440" text-anchor="middle" fill="#059669" font-size="14">Knowledge</text>
+                        <text x="300" y="460" text-anchor="middle" fill="#059669" font-size="14">Loss</text>
+                        <path d="M 435 350 Q 370 400 350 410" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                        <!-- Resource Depletion -->
+                        <circle cx="700" cy="450" r="60" fill="#fae8ff" stroke="#a21caf" stroke-width="2"/>
+                        <text x="700" y="440" text-anchor="middle" fill="#a21caf" font-size="14">Resource</text>
+                        <text x="700" y="460" text-anchor="middle" fill="#a21caf" font-size="14">Depletion</text>
+                        <path d="M 565 350 Q 630 400 650 410" fill="none" stroke="#a21caf" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    </g>
+
+                    <!-- Second Level Cascades -->
+                    <g class="cascade-level-2">
+                        <!-- Infrastructure to Knowledge -->
+                        <path d="M 300 210 Q 300 330 300 390" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+                        
+                        <!-- Administrative to Resource -->
+                        <path d="M 700 210 Q 700 330 700 390" fill="none" stroke="#a21caf" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+                        
+                        <!-- Cross Connections -->
+                        <path d="M 360 150 Q 530 150 640 150" fill="none" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+                        <path d="M 360 450 Q 530 450 640 450" fill="none" stroke="#a21caf" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
+                    </g>
+
+                    <!-- Markers -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Pattern Explanations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Primary Cascade Patterns -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Primary Cascade Patterns</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Initial System Failure</h3>
+                                <p class="text-gray-600">The triggering event that begins the cascade, often stemming from interface control or system dependency issues.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Infrastructure Degradation</h3>
+                                <p class="text-gray-600">Physical and digital infrastructure begins to fail as maintenance and operation become impossible.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Administrative Collapse</h3>
+                                <p class="text-gray-600">Organizations lose the ability to perform basic functions due to interface dependencies.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Secondary Effects -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Secondary Effects</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Knowledge Loss</h3>
+                                <p class="text-gray-600">Institutional knowledge and operational capacity degrade as systems become more opaque.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Resource Depletion</h3>
+                                <p class="text-gray-600">Resources are consumed faster as systems become less efficient and more crisis-prone.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-2 h-2 bg-gray-500 rounded-full mt-2"></div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Compounding Effects</h3>
+                                <p class="text-gray-600">Each failure makes others more likely, creating accelerating cycles of degradation.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
             <!-- Core Concepts -->
             <section class="mb-16">
                 <div class="bg-white p-8 rounded-lg shadow-sm">
