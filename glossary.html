@@ -1,137 +1,181 @@
-import React from 'react';
-import { Search } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Framework Glossary | Interface Control Research</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+   <nav class="bg-white shadow-sm">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="flex justify-between h-16">
+               <div class="flex">
+                   <div class="flex-shrink-0 flex items-center">
+                       <h1 class="text-xl font-bold text-gray-900">Interface Control Research</h1>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </nav>
 
-const GlossaryComponent = () => {
-  const glossaryItems = [
-    {
-      term: "Interface Coup",
-      definition: "The seizure of power through control of administrative interfaces rather than physical force. A process where organizations lose operational independence by becoming dependent on technical systems they don't control.",
-      category: "core"
-    },
-    {
-      term: "Administrative Violence",
-      definition: "The use of bureaucratic tools and technical systems as mechanisms of control. Converting administrative processes into control points that make resistance procedurally impossible.",
-      category: "core"
-    },
-    {
-      term: "Platform Parasitism",
-      definition: "The process of degrading community capacity while creating platform dependencies. Involves destroying local infrastructure while making communities dependent on private platforms.",
-      category: "core"
-    },
-    {
-      term: "Agency Stripping",
-      definition: "Systematic dismantling of institutional knowledge and professional networks through automation and standardization. The process of making independent operation impossible.",
-      category: "core"
-    },
-    {
-      term: "Crisis Cascade",
-      definition: "A pattern where system failures compound and accelerate each other. Each failure makes the next more likely, creating accelerating cycles of degradation.",
-      category: "patterns"
-    },
-    {
-      term: "Manufactured Inefficiency",
-      definition: "The deliberate creation of system inefficiencies to enable control and extraction. Making systems complex enough to require specialized interfaces for basic operation.",
-      category: "patterns"
-    },
-    {
-      term: "Interface Lockout",
-      definition: "When control of technical interfaces becomes de facto control of entire systems. The process where interface access determines operational capability.",
-      category: "patterns"
-    },
-    {
-      term: "Capability Inversion",
-      definition: "Where increasing management complexity leads to decreasing actual capability. The pattern where more complex administration produces worse outcomes.",
-      category: "patterns"
-    },
-    {
-      term: "Boring Systems",
-      definition: "Critical but undervalued administrative systems that enable modern stability. The invisible infrastructure of daily life that becomes vulnerable through its own success.",
-      category: "systems"
-    },
-    {
-      term: "Knowledge Sovereignty",
-      definition: "The ability of communities to maintain and control their own knowledge systems. Often undermined through technical dependencies and platform capture.",
-      category: "systems"
-    }
-  ];
+   <main class="py-10">
+       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+           <header class="mb-12">
+               <h1 class="text-4xl font-bold text-gray-900 mb-4">Framework Glossary</h1>
+               <p class="text-xl text-gray-600">
+                   A comprehensive guide to concepts and patterns in interface control and system degradation
+               </p>
+           </header>
 
-  return (
-    <div className="max-w-4xl mx-auto p-6 bg-white">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Critical Infrastructure Glossary</h1>
-        <p className="text-gray-600">
-          Key terms and concepts for understanding how technical systems reshape power relationships and administrative capacity.
-        </p>
-      </div>
+           <!-- Core Mechanisms -->
+           <section class="mb-16">
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                   <h2 class="text-2xl font-semibold text-gray-900 mb-8 pb-2 border-b">Core Mechanisms of Control</h2>
+                   
+                   <div class="space-y-8">
+                       <div class="border-l-4 border-blue-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Interface Coup</h3>
+                           <p class="text-gray-600 mt-2">
+                               The systematic takeover of governance through control of administrative interfaces and technical systems. A form of power seizure that operates through control of systems rather than direct force, enabling authoritarian control while maintaining the appearance of legitimate process.
+                           </p>
+                       </div>
 
-      {/* Search Bar */}
-      <div className="relative mb-8">
-        <input
-          type="text"
-          placeholder="Search terms..."
-          className="w-full p-3 pl-10 border rounded-lg bg-gray-50"
-        />
-        <Search className="absolute left-3 top-3 text-gray-400" size={20} />
-      </div>
+                       <div class="border-l-4 border-blue-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Platform Parasitism</h3>
+                           <p class="text-gray-600 mt-2">
+                               The systematic process by which platforms degrade institutional capacity and social infrastructure to create extractable dependencies. Unlike simple extraction, parasitic platforms actively weaken host systems to prevent independent function and force ongoing dependency.
+                           </p>
+                       </div>
 
-      {/* Categories */}
-      <div className="space-y-8">
-        {/* Core Concepts */}
-        <section>
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-            Core Concepts
-          </h2>
-          <div className="space-y-4">
-            {glossaryItems
-              .filter(item => item.category === 'core')
-              .map(item => (
-                <div key={item.term} className="border-l-4 border-blue-500 pl-4 py-2">
-                  <h3 className="font-medium text-gray-900">{item.term}</h3>
-                  <p className="text-gray-600 mt-1">{item.definition}</p>
-                </div>
-              ))}
-          </div>
-        </section>
+                       <div class="border-l-4 border-blue-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Capacity Stripping</h3>
+                           <p class="text-gray-600 mt-2">
+                               The deliberate erosion of institutional ability to function independently through technical systems that convert direct capabilities into platform-dependent services. Creates systematic degradation of organizational knowledge and operational capacity.
+                           </p>
+                       </div>
 
-        {/* Patterns */}
-        <section>
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-            Patterns
-          </h2>
-          <div className="space-y-4">
-            {glossaryItems
-              .filter(item => item.category === 'patterns')
-              .map(item => (
-                <div key={item.term} className="border-l-4 border-green-500 pl-4 py-2">
-                  <h3 className="font-medium text-gray-900">{item.term}</h3>
-                  <p className="text-gray-600 mt-1">{item.definition}</p>
-                </div>
-              ))}
-          </div>
-        </section>
+                       <div class="border-l-4 border-blue-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Administrative Violence</h3>
+                           <p class="text-gray-600 mt-2">
+                               The use of bureaucratic and technical systems as mechanisms of control and coercion. Converts administrative processes into control points that make resistance procedurally impossible while maintaining appearance of neutral process.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </section>
 
-        {/* Systems */}
-        <section>
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-            <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-            Systems
-          </h2>
-          <div className="space-y-4">
-            {glossaryItems
-              .filter(item => item.category === 'systems')
-              .map(item => (
-                <div key={item.term} className="border-l-4 border-purple-500 pl-4 py-2">
-                  <h3 className="font-medium text-gray-900">{item.term}</h3>
-                  <p className="text-gray-600 mt-1">{item.definition}</p>
-                </div>
-              ))}
-          </div>
-        </section>
-      </div>
-    </div>
-  );
-};
+           <!-- System Degradation Patterns -->
+           <section class="mb-16">
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                   <h2 class="text-2xl font-semibold text-gray-900 mb-8 pb-2 border-b">System Degradation Patterns</h2>
+                   
+                   <div class="space-y-8">
+                       <div class="border-l-4 border-red-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Crisis Cascades</h3>
+                           <p class="text-gray-600 mt-2">
+                               How system failures compound and accelerate each other. Each failure makes the next more likely, creating accelerating cycles of degradation. Systems are often designed to fail in ways that enable further extraction and control.
+                           </p>
+                       </div>
 
-export default GlossaryComponent;
+                       <div class="border-l-4 border-red-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Network Resilience Degradation</h3>
+                           <p class="text-gray-600 mt-2">
+                               The systematic weakening of informal support networks and community capacity through platform mediation. Makes communities increasingly vulnerable while appearing to modernize them.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-red-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Knowledge Disruption</h3>
+                           <p class="text-gray-600 mt-2">
+                               Breaking continuity of professional practice and institutional memory by converting tacit knowledge into platform metrics. Isolates workers from learning networks while making expertise platform-dependent.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-red-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Manufactured Inefficiency</h3>
+                           <p class="text-gray-600 mt-2">
+                               The deliberate creation of system inefficiencies to enable control and extraction. Makes systems complex enough to require specialized interfaces for basic operation while presenting as optimization.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- Technical Control Systems -->
+           <section class="mb-16">
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                   <h2 class="text-2xl font-semibold text-gray-900 mb-8 pb-2 border-b">Technical Control Systems</h2>
+                   
+                   <div class="space-y-8">
+                       <div class="border-l-4 border-green-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Interface Lockout</h3>
+                           <p class="text-gray-600 mt-2">
+                               When control of technical interfaces becomes de facto control of entire systems. The process where interface access determines operational capability and organizational autonomy.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-green-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Algorithmic Feudalism</h3>
+                           <p class="text-gray-600 mt-2">
+                               New forms of control enabled by algorithmic systems and platform dependencies. Creates power relationships based on access to and control of technical systems rather than traditional authority.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-green-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Memory Markets</h3>
+                           <p class="text-gray-600 mt-2">
+                               The commodification of institutional knowledge and expertise into tradable platform assets. Converts organizational memory and capability into extractable resources.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-green-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Technical Gatekeeping</h3>
+                           <p class="text-gray-600 mt-2">
+                               Using technical systems to control access to essential services and capabilities. Creates artificial scarcity and dependency through interface control.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- Institutional Effects -->
+           <section class="mb-16">
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                   <h2 class="text-2xl font-semibold text-gray-900 mb-8 pb-2 border-b">Institutional Effects</h2>
+                   
+                   <div class="space-y-8">
+                       <div class="border-l-4 border-purple-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Boring Systems Capture</h3>
+                           <p class="text-gray-600 mt-2">
+                               The takeover of critical but undervalued administrative systems that enable modern stability. The invisible infrastructure of daily life becomes vulnerable through its own success and obscurity.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-purple-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Knowledge Sovereignty Loss</h3>
+                           <p class="text-gray-600 mt-2">
+                               The inability of communities and institutions to maintain and control their own knowledge systems. Often undermined through technical dependencies and platform capture.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-purple-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Infrastructure Parasitism</h3>
+                           <p class="text-gray-600 mt-2">
+                               Exploiting and degrading public resources and infrastructure while creating private platform dependencies. Converts public goods into extraction points.
+                           </p>
+                       </div>
+
+                       <div class="border-l-4 border-purple-500 pl-6 py-2">
+                           <h3 class="text-lg font-medium text-gray-900">Dependency Creation</h3>
+                           <p class="text-gray-600 mt-2">
+                               The systematic process of making independent operation impossible through technical and platform dependencies. Creates cascading vulnerabilities that force ongoing reliance on private platforms.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </section>
+       </div>
+   </main>
+</body>
+</html>
