@@ -5,41 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ron Bronson | Strategic Foresight & Critical Systems Consulting</title>
   <meta name="description" content="Ron Bronson is a strategic foresight and systems design consultant focused on public infrastructure, interface governance, and post-institutional resilience.">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@unocss/runtime"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
+  <style>
+    :root {
+      --color-bg: #fefcfb;
+      --color-text: #1a1a1a;
+      --color-accent: #5b6ee1;
+      --color-hover: #3b47c1;
+    }
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--color-hover);
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
-  <nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <a href="/" class="text-xl font-bold text-gray-900">Ron Bronson</a>
-        <div class="flex space-x-4">
-          <a href="/research.html" class="text-gray-700 hover:text-blue-500 font-medium">Research</a>
-          <a href="https://blog.ronbronson.com" class="text-gray-700 hover:text-blue-500 font-medium">Blog</a>
-          <a href="https://tensilefutures.com" class="text-gray-700 hover:text-blue-500 font-medium">Consulting</a>
-        </div>
+<body class="font-sans px-4 py-6 sm:px-6 lg:px-8">
+  <nav class="w-full border-b border-gray-300 mb-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4">
+      <a href="/" class="text-xl font-bold">Ron Bronson</a>
+      <div class="flex gap-6 text-base">
+        <a href="/research.html" class="hover:underline">Research</a>
+        <a href="https://blog.ronbronson.com" class="hover:underline">Blog</a>
+        <a href="https://tensilefutures.com" class="hover:underline">Consulting</a>
       </div>
     </div>
   </nav>
-  <main class="py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <header class="mb-12">
-        <h1 class="text-5xl font-bold mb-6 leading-tight">Strategic foresight for post-trust systems.</h1>
-        <p class="text-xl text-gray-700 leading-relaxed">
-          I'm a strategist, designer, and critical theorist focused on complexity, institutional resilience, and service delivery at scale. My work lives at the intersection of systems strategy, AI governance, and interface design for public and civic institutions.
-        </p>
-      </header>
-      <section class="prose prose-lg text-gray-700">
-        <p>
-          At a time when public trust is fragile and institutions face cascading crises, I help organizations—governments, nonprofits, and mission-driven companies—rethink how services are designed and delivered. My practice blends strategic foresight, service design, and domain diagnostics to surface risks, clarify opportunities, and build adaptive capacity.
-        </p>
-        <p>
-          Whether you're a city government, an advocacy org, or a forward-looking consultancy, I work with teams navigating complexity, degradation, and digital transformation to build strategy grounded in real-world constraints and the long arc of public life.
-        </p>
-        <p>
-          This site houses both my consulting practice and my open research projects, including the <a href="/research.html">Interface Memetics Lab</a>—a space for examining how platformization and system capture reshape the fabric of governance and daily life.
-        </p>
-      </section>
-    </div>
+  <main class="max-w-4xl mx-auto">
+    <header class="mb-12">
+      <h1 class="text-4xl font-semibold mb-4 leading-tight tracking-tight">Strategic foresight for post-trust systems.</h1>
+      <p class="text-lg leading-relaxed text-gray-700">
+        I'm a strategist, designer, and critical theorist focused on complexity, institutional resilience, and service delivery at scale. My work lives at the intersection of systems strategy, AI governance, and interface design for public and civic institutions.
+      </p>
+    </header>
+    <section class="text-base leading-loose text-gray-800 space-y-6">
+      <p>
+        At a time when public trust is fragile and institutions face cascading crises, I help organizations—governments, nonprofits, and mission-driven companies—rethink how services are designed and delivered. My practice blends strategic foresight, service design, and domain diagnostics to surface risks, clarify opportunities, and build adaptive capacity.
+      </p>
+      <p>
+        Whether you're a city government, an advocacy org, or a forward-looking consultancy, I work with teams navigating complexity, degradation, and digital transformation to build strategy grounded in real-world constraints and the long arc of public life.
+      </p>
+      <p>
+        This site houses both my consulting practice and my open research projects, including the <a href="/research.html" class="underline">Interface Memetics Lab</a>—a space for examining how platformization and system capture reshape the fabric of governance and daily life.
+      </p>
+    </section>
   </main>
 </body>
 </html>
