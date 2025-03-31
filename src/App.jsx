@@ -2,7 +2,6 @@ import {
   Window,
   WindowHeader,
   WindowContent,
-  Frame,
   Toolbar,
   Button,
   Divider,
@@ -22,16 +21,16 @@ function App() {
           <span>Strategic Foresight • Service Design • Systems Critique</span>
         </Toolbar>
         <WindowContent>
-          <Frame variant="well" className="mb-4 p-3">
+          <div className="panel mb-4 p-3">
             <h1 className="title">Ron Bronson</h1>
             <p>
               Strategist, designer, and critical theorist working at the intersection of complex systems,
               public service delivery, and institutional design. I think about consequence, critique
               interfaces, and write about what happens when systems fail.
             </p>
-          </Frame>
+          </div>
 
-          <Frame className="p-3 mb-4">
+          <div className="panel p-3 mb-4">
             <h2>🔍 Current Work</h2>
             <ul>
               <li>
@@ -51,9 +50,9 @@ function App() {
                 <a href="https://digitalcorpspdx.org" target="_blank"> view project</a>
               </li>
             </ul>
-          </Frame>
+          </div>
 
-          <Frame className="p-3 mb-4">
+          <div className="panel p-3 mb-4">
             <h2>🎓 Teaching & Talks</h2>
             <p>
               In 2024, I taught Service Design at the University of Michigan in collaboration with the
@@ -63,9 +62,9 @@ function App() {
               I also speak regularly at universities (Portland State, George Fox) and to teams inside
               organizations about UX, transformation, and experience design.
             </p>
-          </Frame>
+          </div>
 
-          <Frame className="p-3">
+          <div className="panel p-3">
             <h2>✍️ Selected Writing</h2>
             <ul>
               <li>
@@ -78,7 +77,7 @@ function App() {
                 <a href="https://blog.ronbronson.com">Blog</a> — more informal, topical riffs
               </li>
             </ul>
-          </Frame>
+          </div>
         </WindowContent>
       </Window>
     </main>
