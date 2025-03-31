@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Spectral', serif;
+  background: #FFABAB;
+  color: #1c1c1c;
+}
+
+.app {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.window {
+  width: 100%;
+  max-width: 900px;
+}
+
+.window-header {
+  background-color: #FFD700;
+  font-weight: bold;
+}
