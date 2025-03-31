@@ -1,59 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Ron Bronson</title>
-  <meta name="description" content="Ron Bronson’s research explores consequence design, interface governance, and the sociotechnical dimensions of institutional change." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+  <meta name="description" content="Ron Bronson's research explores consequence design, interface governance, and the sociotechnical dimensions of institutional change.">
+  <link rel="icon" href="/line.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   <style>
-    body {
-      background-color: #f9f5ff;
-      font-family: 'Spectral', serif;
-    }
-    h1, h2 {
-      font-family: 'Fira Mono', monospace;
+    /* Page-specific styles */
+    .research-banner {
+      background-color: #f3f0ff;
+      color: var(--color-accent);
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
   </style>
 </head>
-<body class="bg-[#f9f5ff] text-gray-800">
-
-  <!-- Banner -->
-  <div class="text-center py-2 bg-purple-100 text-purple-800 text-sm font-medium">
-    You’re in <span class="font-semibold">Research Mode</span>: <a href="https://ronbronson.design" class="underline">Return to Main Site</a>
+<body>
+  <div class="research-banner">
+    You're in <span style="font-weight: 600;">Research Mode</span>: <a href="/" class="underline">Return to Main Site</a>
   </div>
 
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-6 py-16">
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold mb-4">Research & Writing</h1>
-      <p class="text-xl text-gray-700 leading-relaxed">
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-brand">Ron Bronson</a>
+      <div class="nav-links">
+        <a href="/speaking.html" class="nav-link">Speaking</a>
+        <a href="/research.html" class="nav-link active">Research</a>
+        <a href="/tennis.html" class="nav-link">Tennis</a>
+        <a href="https://tensilefutures.com" class="nav-link">Consulting</a>
+        <a href="https://blog.ronbronson.com" class="nav-link">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <header class="mb-5">
+      <h1>Research & Writing</h1>
+      <p class="text-muted" style="font-size: 1.25rem; line-height: 1.7;">
         My research explores the intersection of infrastructure, interface, and institutional life. I work at the edge of speculative design, public systems, and critical theory to examine how seemingly small design decisions have far-reaching consequences.
       </p>
     </header>
-
-    <section class="mb-12 space-y-6 text-lg">
-      <p>
-        Through the lens of <strong>consequence design</strong>, I examine how technical systems—especially those mediated through AI, interfaces, and automation—reshape civic life, governance, and public trust. My work maps how platforms encode fragility and how institutions become dependent on tools that were never designed for the public interest.
-      </p>
-
-      <p>
-        I approach these questions not from a purely academic perspective, but as a practitioner with a background in public service, civic technology, and digital strategy. My frameworks draw from lived systems work, critical design, and theoretical traditions, focusing on what systems owe the people they govern—and how power circulates through both code and control.
-      </p>
-
-      <p>
-        I'm particularly interested in themes like <strong>hype studies</strong>, interface traps, and the political work of spectacle—how narratives about technology become governance tools themselves. These inquiries are part of an ongoing body of work that merges policy thinking with speculative research.
-      </p>
-
-      <p>
-        You can read my current writings and frameworks over at <a href="https://consequencedesign.org" class="text-blue-600 underline">ConsequenceDesign.org</a>, where I explore these ideas in public.
-      </p>
+    
+    <section class="mb-5">
+      <div class="card">
+        <p>
+          Through the lens of <strong>consequence design</strong>, I examine how technical systems—especially those mediated through AI, interfaces, and automation—reshape civic life, governance, and public trust. My work maps how platforms encode fragility and how institutions become dependent on tools that were never designed for the public interest.
+        </p>
+        <p>
+          I approach these questions not from a purely academic perspective, but as a practitioner with a background in public service, civic technology, and digital strategy. My frameworks draw from lived systems work, critical design, and theoretical traditions, focusing on what systems owe the people they govern—and how power circulates through both code and control.
+        </p>
+      </div>
     </section>
 
-    <footer class="mt-16 text-sm text-center text-gray-500">
-      <p class="mt-2">Built with Tailwind, hosted on GitHub + Netlify</p>
-    </footer>
-  </main>
+    <section class="mb-5">
+      <h2>Research Focus Areas</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Consequence Design</h3>
+            <p class="project-description">A critical examination of friction, foresight, and failure in digital systems. This framework analyzes how design decisions cascade into unexpected outcomes, especially in public infrastructure.</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Interface Governance</h3>
+            <p class="project-description">Exploring how user interfaces shape policy implementation and decision-making in public institutions, creating both constraints and possibilities for civic participation.</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Hype Studies</h3>
+            <p class="project-description">Investigating how narratives and spectacle around technology become governance tools themselves, shaping both investment and policy decisions across institutions.</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">AI Mediation</h3>
+            <p class="project-description">Analyzing agent experience (AX) and context loss in automated systems, with particular attention to how AI interfaces change the relationship between citizens and public services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>Current Projects</h2>
+      <div class="card">
+        <h3 class="card-title">ConsequenceDesign.org</h3>
+        <div class="card-meta">Ongoing Publication</div>
+        <p>An evolving body of work exploring the frameworks, case studies, and theoretical underpinnings of consequence design as both a critical lens and practical methodology.</p>
+        <a href="https://consequencedesign.org" class="btn">Visit Website</a>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-title">Out of Scope</h3>
+        <div class="card-meta">Publication Series</div>
+        <p>A critical publication examining design, power, and systems - exploring the unintended consequences of design decisions on individuals and communities, with particular focus on public infrastructure.</p>
+        <a href="#" class="btn btn-outline">Read Publication</a>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-title">QX Reader</h3>
+        <div class="card-meta">Archive Project</div>
+        <p>An archive of consequence design writing and system critique - documenting and analyzing how digital systems shape human experience, with a focus on historical patterns in interface design.</p>
+        <a href="#" class="btn btn-outline">View Archive</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Upcoming Research</h2>
+      <div class="card">
+        <p>
+          I'm particularly interested in developing new frameworks around <strong>interface traps</strong> and the political work of spectacle—how narratives about technology become governance tools themselves. These inquiries are part of an ongoing body of work that merges policy thinking with speculative research.
+        </p>
+        <p>
+          If you're interested in collaborating on research, curriculum development, or speaking engagements related to these topics, please feel free to reach out.
+        </p>
+        <a href="mailto:research@ronbronson.com" class="btn">Contact Me</a>
+      </div>
+    </section>
+  </div>
+  
+  <footer class="container" style="padding: 2rem 1.5rem; text-align: center; border-top: 1px solid var(--color-border);">
+    <p class="text-muted">© 2025 Ron Bronson. All rights reserved.</p>
+  </footer>
 </body>
 </html>
