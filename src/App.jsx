@@ -7,7 +7,9 @@ function App() {
       <Window className="window">
         <WindowHeader className="window-header">ronbronson.design</WindowHeader>
         <WindowContent>
-          {/* content will be injected here */}
+          <h1>Ron Bronson</h1>
+          <p>Strategic foresight, consequence design, and critical systems thinking.</p>
+          <p>I build tools, run experiments, and write about the failures and futures of infrastructure, interfaces, and digital governance.</p>
         </WindowContent>
       </Window>
     </main>
