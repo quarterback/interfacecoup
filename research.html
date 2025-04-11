@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Ron Bronson</title>
-  <meta name="description" content="Ron Bronson’s research explores consequence design, interface governance, and the sociotechnical dimensions of institutional change." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f9f5ff;
-      font-family: 'Spectral', serif;
+      background-color: #fefcfb;
+      color: #1a1a1a;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 42rem;
+      margin: auto;
     }
-    h1, h2 {
-      font-family: 'Fira Mono', monospace;
+    h1, h2, h3 {
+      font-family: 'Alegreya', serif;
+    }
+    a {
+      color: #5b6ee1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #3b47c1;
+    }
+    section {
+      margin-bottom: 3rem;
     }
   </style>
 </head>
-<body class="bg-[#f9f5ff] text-gray-800">
+<body>
+  <h1>Research</h1>
 
-  <!-- Banner -->
-  <div class="text-center py-2 bg-purple-100 text-purple-800 text-sm font-medium">
-    You’re in <span class="font-semibold">Research Mode</span>: <a href="https://ronbronson.design" class="underline">Return to Main Site</a>
-  </div>
+  <section>
+    <p>
+      My research focuses on the relationship between digital infrastructure, design practice, and institutional resilience. I’m especially interested in how interfaces shape policy delivery, public trust, and civic capacity—and what happens when those systems are designed without accountability.
+    </p>
+    <p>
+      I call this broader framework <strong>Consequence Design</strong>: a way to interrogate how design decisions produce long-term effects, often beyond the scope or awareness of any single actor.
+    </p>
+    <p>
+      I’ve recently introduced the concept of <strong>Interaction Engineering</strong> to describe the applied systems work that often sits between service design, product strategy, and infrastructure delivery. While traditional UX has become flattened in many orgs, Interaction Engineering emphasizes structural clarity, interface coherence, and resilient flows across time, constraints, and teams.
+    </p>
+    <p>
+      My current research explores:
+    </p>
+    <ul>
+      <li>How AI systems reshape civic experiences through opaque interfaces</li>
+      <li>The erosion of institutional memory in digital service delivery</li>
+      <li>Patterns of administrative friction and their role in democratic life</li>
+      <li>Design artifacts that enable legibility, maintenance, and strategic clarity at scale</li>
+    </ul>
+    <p>
+      I’ve spoken about these topics at global venues including <strong>IxDA Oslo</strong>, <strong>UX Australia</strong>, <strong>Rosenfeld Media’s Civic Design Conference</strong>, and others. My writing has appeared in <em>A List Apart</em>, <em>Public Sector Network</em>, and more.
+    </p>
+  </section>
 
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-6 py-16">
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold mb-4">Research & Writing</h1>
-      <p class="text-xl text-gray-700 leading-relaxed">
-        My research explores the intersection of infrastructure, interface, and institutional life. I work at the edge of speculative design, public systems, and critical theory to examine how seemingly small design decisions have far-reaching consequences.
-      </p>
-    </header>
+  <section>
+    <h2>Current Interests</h2>
+    <ul>
+      <li>Agent Experience (AX) and ambient computing in public services</li>
+      <li>Interaction engineering frameworks for interface-level resilience</li>
+      <li>Consequential design ethics in platform policy and urban systems</li>
+      <li>Alternative governance models for civic technology ecosystems</li>
+    </ul>
+  </section>
 
-    <section class="mb-12 space-y-6 text-lg">
-      <p>
-        Through the lens of <strong>consequence design</strong>, I examine how technical systems—especially those mediated through AI, interfaces, and automation—reshape civic life, governance, and public trust. My work maps how platforms encode fragility and how institutions become dependent on tools that were never designed for the public interest.
-      </p>
+  <section>
+    <h2>Selected Talks & Writing</h2>
+    <ul>
+      <li><strong>"The Interface Is The Interview"</strong> — UX and hiring systems [<a href="https://blog.ronbronson.com">blog.ronbronson.com</a>]</li>
+      <li><strong>"Consequence Design"</strong> — Framework for post-platform design ethics</li>
+      <li><strong>"Designing for Agent Experience"</strong> — Talk on AX at IxDA Oslo</li>
+    </ul>
+  </section>
 
-      <p>
-        I approach these questions not from a purely academic perspective, but as a practitioner with a background in public service, civic technology, and digital strategy. My frameworks draw from lived systems work, critical design, and theoretical traditions, focusing on what systems owe the people they govern—and how power circulates through both code and control.
-      </p>
-
-      <p>
-        I'm particularly interested in themes like <strong>hype studies</strong>, interface traps, and the political work of spectacle—how narratives about technology become governance tools themselves. These inquiries are part of an ongoing body of work that merges policy thinking with speculative research.
-      </p>
-
-      <p>
-        You can read my current writings and frameworks over at <a href="https://consequencedesign.org" class="text-blue-600 underline">ConsequenceDesign.org</a>, where I explore these ideas in public.
-      </p>
-    </section>
-
-    <footer class="mt-16 text-sm text-center text-gray-500">
-      <p class="mt-2">Built with Tailwind, hosted on GitHub + Netlify</p>
-    </footer>
-  </main>
 </body>
 </html>
