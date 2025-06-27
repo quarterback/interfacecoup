@@ -1,61 +1,311 @@
+Skip to content
+Navigation Menu
+quarterback
+interfacecoup
+
+Type / to search
+Code
+Issues
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+interfacecoup
+/
+index-test.html
+in
+main
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+2
+Line wrap mode
+
+No wrap
+Editing index-test.html file contents
+Selection deleted
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ron Bronson</title>
-  <meta name="description" content="Systems, infrastructure, and design—across policy, AI, and public service." />
+  <meta name="description" content="Public systems, design practice, and institutional weirdness." />
+  <link rel="icon" href="/line.svg" type="image/svg+xml" />
+  <script src="https://unpkg.com/@unocss/runtime"></script>
   <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --color-bg: #f6fdfb;
+      --color-text: #1a1a1a;
+      --color-accent: #582f6b; /* eggplant */
+      --color-hover: #7bd6bd;  /* seafoam */
+    }
+
     body {
-      margin: 0;
-      padding: 2rem;
+      background-color: var(--color-bg);
+      color: var(--color-text);
       font-family: 'Space Grotesk', sans-serif;
-      background-color: #f8f8f7;
-      color: #1c1c1c;
-      font-size: 1.15rem;
       line-height: 1.6;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 2rem 1rem;
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
+
     a {
-      color: #4a4ae1;
+      color: var(--color-accent);
       text-decoration: none;
     }
+
     a:hover {
+      color: var(--color-hover);
       text-decoration: underline;
     }
-    .links {
-      margin-top: 2rem;
+
+    .container {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .nav {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      justify-content: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.875rem;
+      color: #555;
+    }
+
+    footer .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer i {
+      font-size: 1.2rem;
     }
   </style>
 </head>
+
 <body>
-  <h1>Ron Bronson</h1>
+  <div class="container">
+    <nav class="nav">
+      <a href="/speaking.html">Talks</a>
+      <a href="https://blog.ronbronson.com">Writing</a>
+    </nav>
 
-  <p>I work on the mechanics of systems most people don't see. Mostly public, often messy. Design, infrastructure, maintenance, and the places where trust falls apart.</p>
+    <main>
+      <h1>Ron Bronson</h1>
 
-  <p>I’ve led design teams in government, run civic tech programs, coached high school tennis, and taught systems thinking in architecture schools. I’ve worked on AI tooling, public infrastructure, vendor hellscapes, and compliance theater. It’s all the same job, really.</p>
+      <div class="section">
+        <p>
+          I work on public systems—designing, maintaining, and diagnosing the parts people rely on but rarely see. My practice blends service design, interaction infrastructure, policy mechanics, and institutional repair.
+        </p>
+      </div>
 
-  <p>Lately: Deterrence tooling for large language models, participatory infrastructure experiments, and building out the <a href="https://digitalcorpspdx.org">Portland Digital Corps</a>. I also teach at the University of Michigan in the Urban Technology program.</p>
+      <div class="section">
+        <p>
+          I spent seven years at <a href="https://18f.gsa.gov" target="_blank">18F</a> helping federal agencies build and improve digital services, leading design strategy and advising executive teams. Most recently, I organized the <a href="https://digitalcorpspdx.org" target="_blank">Portland Digital Corps</a>, a civic sprint pairing technologists with nonprofits on urgent projects.
+        </p>
+      </div>
 
-  <p>Always interested in weird problems, broken workflows, speculative civics, and people who like making things better without pretending it's simple.</p>
+      <div class="section">
+        <p>
+          In 2024, I led early explorations into LLM observability and trust tooling—scoring agents, flagging failure states, and designing the seams between model behavior and real-world consequence. That work’s paused, but the questions aren’t.
+        </p>
+      </div>
 
-  <div class="links">
-    <a href="/speaking.html">Media</a>
-    <a href="https://blog.ronbronson.com">Blog</a>
-    <a href="/now.html">Now</a>
-    <a href="mailto:ron@ronbronson.com">Email</a>
+      <div class="section">
+        <p>
+          I teach urban technology at the University of Michigan. I also run a research initiative called the Institute for Public Mechanics, focused on capacity-building for service delivery and interaction integrity across government and infrastructure.
+        </p>
+      </div>
+
+      <div class="section">
+        <p>
+        <a href="/now.html">Here’s what I’m working on right now.</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Built hastily with HTML & CSS. Font: Space Grotesk. Colors: Eggplant & Seafoam.</p>
+      <div class="social-icons">
+        <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
+        <a href="https://last.fm/user/statechampion" aria-label="Last.fm"><i class="fab fa-lastfm"></i></a>
+        <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://music.apple.com/profile/ronbronson" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+        <a href="https://www.mixcloud.com/908RB/" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
+
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+Editing interfacecoup/index-test.html at main · quarterback/interfacecoup
+ 
