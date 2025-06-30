@@ -1,92 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ron Bronson | Design Futures for the Speculative Present</title>
-  <meta name="description" content="Imaginging for the world we already live in.">
-  <link rel="icon" href="/line.svg" type="image/svg+xml">
+  <meta name="description" content="Imagining for the world we already live in." />
+  <link rel="icon" href="/line.svg" type="image/svg+xml" />
   <script src="https://unpkg.com/@unocss/runtime"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --color-bg: #fefcfb;
+      --color-bg: #f6fdfb;
       --color-text: #1a1a1a;
-      --color-accent: #5b6ee1;
-      --color-hover: #3b47c1;
+      --color-accent: #582f6b; /* eggplant */
+      --color-hover: #7bd6bd;  /* seafoam */
     }
+
     body {
       background-color: var(--color-bg);
       color: var(--color-text);
-      font-family: 'Lora', serif;
+      font-family: 'Space Grotesk', sans-serif;
       line-height: 1.6;
+      padding: 2rem 1rem;
     }
-    h1, h2, h3 {
-      font-family: 'Alegreya', serif;
-    }
+
     a {
       color: var(--color-accent);
       text-decoration: none;
     }
+
     a:hover {
       color: var(--color-hover);
       text-decoration: underline;
     }
+
     .container {
       max-width: 42rem;
       margin: 0 auto;
-      padding: 0 1rem;
     }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .nav a {
+      margin-right: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
     .section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ccc;
+      font-size: 0.875rem;
+      color: #555;
+    }
+
+    footer .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer i {
+      font-size: 1.2rem;
     }
   </style>
 </head>
-<body class="px-4 py-6 sm:px-6 lg:px-8">
-  <nav class="w-full border-b border-gray-300 mb-10">
-    <div class="max-w-3xl mx-auto flex justify-between items-center py-4">
-      <a href="/" class="text-xl font-bold font-semibold">Ron Bronson</a>
-      <div class="flex gap-6 text-base">
-        <a href="/speaking.html" class="hover:underline">Media</a>
-        <a href="https://blog.ronbronson.com" class="hover:underline">Blog</a>
+
+<body>
+  <div class="container">
+    <nav class="nav">
+      <strong>Ron Bronson</strong>
+      <div>
+        <a href="/speaking.html">Media</a>
+        <a href="https://blog.ronbronson.com">Blog</a>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <main class="max-w-3xl mx-auto">
+    <main>
+      <div class="section">
+        <p>
+          I'm Ron. These days, I'm mostly interested in the mechanics of everyday systems -- think all the screens, sites & forms you deal with on a daily basis -- and how to improve those experiences. Usually, I'm zooming way out and thinking about how to get all the various pieces to operate better together, but other times I'm working in the weeds on solving specific problems within complex organizations around the world.
+        </p>
+      </div>
 
-    <header class="mb-10">
-      <p class="text-lg text-gray-700">
-        I'm Ron. These days, I'm mostly interested in the mechanics of everyday systems -- think all the screens, sites & forms you deal with on a daily basis -- and how to improve those experiences. Usually, I'm zooming way out and thinking about how to get all the various pieces to operate better together, but other times I'm working in the weeds on solving specific problems within complex organizations around the world.
-      </p>
+      <div class="section">
+        <p>
+          Skillswise, you can find me where interaction architecture, service design & strategy meet. The joke here is they often don't, due to silos, people's inability to believe that designers can contribute to product delivery except focused on pixels, so I'm usually someone brought in to bridge those gaps. Recently, I organized the <a href="https://digitalcorpspdx.org">Portland Digital Corps</a>, a short-term digital sprint aimed at helping Oregon-based non-profits.
+        </p>
 
-      <p class="text-lg text-gray-700 mt-4">
-        Skillswise, you can find me where interaction architecture, service design & strategy meet. The joke here is they often don't, due to silos, people's inability to believe that designers can contribute to product delivery except focused on pixels, so I'm usually someone brought in to bridge those gaps. Recently, I organized the <a href="https://digitalcorpspdx.org">Portland Digital Corps</a>, a short-term digital sprint aimed at helping Oregon-based non-profits. 
+        <p>
+          I spent the last seven years at <a href="https://18f.org" target="_blank">18F.gov</a>, a pioneering digital services agency, the last 4 of those as Head of Design there, leading nearly 40 designers. I'm also an incoming assistant professor of practice in urban technology at the <a href="https://taubmancollege.umich.edu/academics/urban-and-regional-planning/bachelor-of-science-in-urban-technology/">University of Michigan's</a> Taubman College of Architecture & Urban Planning.
+        </p>
+      </div>
 
-I spent the last seven years at <a href="https://18f.org" target="_blank">18F.gov</a>, a pioneering digital services agency, the last 4 of those as Head of Design there, leading nearly 40 designers. I'm also an incoming assistant professor of practice in urban technology at the <a href="https://taubmancollege.umich.edu/academics/urban-and-regional-planning/bachelor-of-science-in-urban-technology/">University of Michigan's</a> Taubman College of Architecture & Urban Planning. 
-      </p>
+      <div class="section">
+        <p>
+          While I have deep roots in user-centered design practice and leading agile teams across the delivery lifecycle, I'm most interested these days in thinking aloud about our civil relationship with technology, platforms, software & middleware and what to do about it how it's changing how we live, work and play. Last fall, I organized Design For The Public 24, a two-day conference bringing together thoughtful folks who work in the public interest to discuss how we can build & do good from where we stand or sit.
+        </p>
+      </div>
 
-      <p class="text-lg text-gray-700 mt-4">
-        While I have deep roots in user-centered design practice and leading agile teams across the delivery lifecycle, I'm most interested these days in thinking aloud about our civil relationship with technology, platforms, software & middleware and what to do about it how it's changing how we live, work and play.
-      </p>
+      <div class="section">
+        <p>
+          I keep a <a href="https://tensilefutures.com">glossy site</a> with some of my past work. Semi-often, I write <a href="https://blog.ronbronson.com">blog posts</a> and I co-host a <a href="https://futureperfectbook.club">book club podcast</a> with my friend Joel. I've just finished a two-year stint as Board President of <a href="https://aigapdx.org">AIGA Portland</a>, where I helped launch 
+          <a href="https://pdxdesignmonth.com">Portland Design Month</a>. I've spent the last decade as a successful high school tennis coach in my spare time. I usually write my updates on my <a href="now.html">now-ish page.</a>
+        </p>
+      </div>
+    </main>
 
-      <p class="text-lg text-gray-700 mt-4">
-        I keep a <a href="https://tensilefutures.com">glossy site</a> with some of my past work. Semi-often, I write <a href="https://blog.ronbronson.com">blog posts</a> and I co-host a <a href="https://futureperfectbook.club">book club podcast</a> with my friend Joel.
-      </p>
-    </header>
-
-  </main>
-
-  <footer class="max-w-3xl mx-auto mt-16 pt-6 border-t border-gray-300 text-sm text-gray-600">
-    <div class="flex gap-4">
-      <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
-      <a href="https://last.fm/user/statechampion" aria-label="Last.fm"><i class="fab fa-lastfm"></i></a>
-      <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-      <a href="https://music.apple.com/profile/ronbronson" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
-      <a href="https://www.mixcloud.com/908RB/" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
-    </div>
-  </footer>
+    <footer>
+      <p>Built hastily with HTML & CSS. Font: Space Grotesk. Colors: Eggplant & Seafoam.</p>
+      <div class="social-icons">
+        <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
+        <a href="https://last.fm/user/statechampion" aria-label="Last.fm"><i class="fab fa-lastfm"></i></a>
+        <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://music.apple.com/profile/ronbronson" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+        <a href="https://www.mixcloud.com/908RB/" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
