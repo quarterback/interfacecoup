@@ -1,6 +1,6 @@
 :root {
-  --color-1: rgb(33.62% 49.296% 77.338%);
-  --color-2: rgb(92.864% 88.239% 71.025%);
+  --color-1: rgb(33.62% 49.296% 77.338%);   /* text */
+  --color-2: rgb(92.864% 88.239% 71.025%);  /* background */
   --font-heading: 'Alegreya', serif;
   --font-body: 'Lora', serif;
 }
@@ -9,18 +9,19 @@ body {
   background-color: var(--color-2);
   color: var(--color-1);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
-  padding: 2rem 1rem;
-  max-width: 42rem;
+  padding: 1.5rem 1rem;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
 h1, h2 {
   font-family: var(--font-heading);
+  font-weight: 700;
   color: var(--color-1);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -33,20 +34,29 @@ a:hover {
 }
 
 nav {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+nav .nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
 }
 
 nav .nav-links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
-nav a {
-  margin-right: 1.5rem;
-  font-weight: bold;
+nav .nav-links a {
+  font-weight: 600;
+  font-family: var(--body-font);
 }
 
 .section {
@@ -56,7 +66,6 @@ nav a {
 footer {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.875rem;
   color: var(--color-1);
 }
@@ -66,10 +75,16 @@ footer a {
   text-decoration: underline;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-}
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.text-lg {
-  font-size: 1.125rem;
+  nav .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
 }
