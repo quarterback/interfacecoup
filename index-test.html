@@ -1,135 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ron Bronson</title>
-  <meta name="description" content="Public systems, design practice, and institutional weirdness." />
-  <link rel="icon" href="/line.svg" type="image/svg+xml" />
-  <script src="https://unpkg.com/@unocss/runtime"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --color-bg: #f6fdfb;
-      --color-text: #1a1a1a;
-      --color-accent: #582f6b; /* eggplant */
-      --color-hover: #7bd6bd;  /* seafoam */
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ron Bronson | Designer and Strategist</title>
+    <meta name="description" content="Ron Bronson is a design executive, strategist & scholar who sometimes coaches tennis." />
+    <meta name="author" content="Ron Bronson" />
 
-    body {
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      font-family: 'Space Grotesk', sans-serif;
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
+    <meta property="og:title" content="Ron Bronson | Designer and Strategist" />
+    <meta property="og:description" content="Ron Bronson is a design executive, strategist & scholar who sometimes coaches tennis." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    a {
-      color: var(--color-accent);
-      text-decoration: none;
-    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/styles.css">
+  </head>
 
-    a:hover {
-      color: var(--color-hover);
-      text-decoration: underline;
-    }
+  <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
 
-    .container {
-      max-width: 42rem;
-      margin: 0 auto;
-    }
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="header-title">Ron Bronson</h1>
+        <nav class="nav">
+          <a href="/speaking.html">Media</a>
+          <a href="/tennis.html">Coaching</a>
+          <a href="https://blog.ronbronson.com" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+          <a href="https://tensilefutures.com" target="_blank" rel="noopener noreferrer">Work ↗</a>
+        </nav>
+      </header>
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: flex-start;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #ccc;
-      font-size: 0.875rem;
-      color: #555;
-    }
-
-    footer .social-icons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    footer i {
-      font-size: 1.2rem;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <nav class="nav">
-      <a href="/speaking.html">Talks</a>
-      <a href="https://blog.ronbronson.com">Writing</a>
-    </nav>
-
-    <main>
-      <h1>Ron Bronson</h1>
-
-      <div class="section">
+      <!-- Main Content -->
+      <main>
         <p>
-          I work on public systems—designing, maintaining, and diagnosing the parts people rely on but rarely see. My practice blends service design, interaction infrastructure, policy mechanics, and institutional repair.
+          Most recently, I was Head of Design at 
+          <a href="https://18f.org" target="_blank" rel="noopener noreferrer">18F</a>, 
+          where I led the agency's design practice. I was responsible for growing and sustaining a multidisciplinary team that shaped how design operated across dozens of high-impact government systems. I am also an incoming Assistant Professor of Practice in Urban Technology at the University of Michigan, where I teach design through the lens of infrastructure, failure, and systems repair.
         </p>
-      </div>
-
-      <div class="section">
+        
         <p>
-          I spent seven years at <a href="https://18f.gsa.gov" target="_blank">18F</a> helping federal agencies build and improve digital services, leading design strategy and advising executive teams. Most recently, I organized the <a href="https://digitalcorpspdx.org" target="_blank">Portland Digital Corps</a>, a civic sprint pairing technologists with nonprofits on urgent projects.
+          My work focuses on how public services actually function and break in the real world. I investigate how policy gets operationalized, how harm is embedded into everyday tools, and how we can use design to build resilience into organizations.
         </p>
-      </div>
-
-      <div class="section">
+        
         <p>
-          In 2024, I led early explorations into LLM observability and trust tooling—scoring agents, flagging failure states, and designing the seams between model behavior and real-world consequence. That work’s paused, but the questions aren’t.
+          Outside of work, I have been a radio news anchor, trivia host, and a state-title winning high school tennis coach. People tend to find me through skeeball, 
+          <a href="https://www.superpesis.fi/ajankohtaista/superpesis-yhdysvaltalainen-ron-bronson-toteutti-unelmansa-ja-matkusti-suomeen-katsomaan-pesapalloa" target="_blank" rel="noopener noreferrer">pesäpallo</a>, 
+          or that one time 
+          <a href="https://en.wikipedia.org/wiki/Tennis_polo" target="_blank" rel="noopener noreferrer">we invented a sport</a>. 
+          I also co-host the 
+          <a href="https://futureperfectbook.club" target="_blank" rel="noopener noreferrer">Future Perfect Book Club</a>.
         </p>
-      </div>
 
-      <div class="section">
-        <p>
-          I teach urban technology at the University of Michigan. I also run a research initiative called the Institute for Public Mechanics, focused on capacity-building for service delivery and interaction integrity across government and infrastructure.
-        </p>
-      </div>
+        <h2>Recent Writing</h2>
+        <div id="blog-feed" class="loading">
+          <span class="loading-dot">●</span>
+          <span>FETCHING RECENT POSTS...</span>
+        </div>
 
-      <div class="section">
-        <p>
-                                                  <a href="/now.html">Here’s what I’m working on right now.</a>
-        </p>
-      </div>
-    </main>
+        <div class="music-widget">
+          <img 
+            src="https://lastfm-recently-played.vercel.app/api?user=statechampion" 
+            alt="Recently played music from Last.fm"
+            style="image-rendering: pixelated; filter: brightness(1.1) contrast(1.25) hue-rotate(90deg);"
+          />
+        </div>
+      </main>
 
-    <footer>
-      <p>Built hastily with HTML & CSS. Font: Space Grotesk. Colors: Eggplant & Seafoam.</p>
-      <div class="social-icons">
-        <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
-        <a href="https://last.fm/user/statechampion" aria-label="Last.fm"><i class="fab fa-lastfm"></i></a>
-        <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-        <a href="https://music.apple.com/profile/ronbronson" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
-        <a href="https://www.mixcloud.com/908RB/" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
-      </div>
-    </footer>
-  </div>
-</body>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-section">
+          <div class="social-links">
+            <a href="https://bsky.app/profile/ronbronson.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fas fa-cloud"></i>
+              <span>Bluesky</span>
+            </a>
+            <a href="https://last.fm/user/statechampion" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-lastfm"></i>
+              <span>Last.fm</span>
+            </a>
+            <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://music.apple.com/profile/ronbronson" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-apple"></i>
+              <span>Apple Music</span>
+            </a>
+            <a href="https://www.mixcloud.com/908RB/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fas fa-music"></i>
+              <span>Mixcloud</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/src/script.js"></script>
+  </body>
 </html>
