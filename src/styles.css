@@ -1,0 +1,322 @@
+/* Dual Theme System - Light Monospace & Dark */
+
+/* Base font imports */
+@import url('https://fonts.googleapis.com/css2?family=SF+Mono:wght@300;400;500;600&family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Charter:wght@400;700&display=swap');
+
+/* CSS Custom Properties for Dual Themes */
+:root {
+  /* Light Monospace Theme (default) */
+  --font-mono: 'SF Mono', 'Fira Code', 'Monaco', 'Menlo', monospace;
+  --font-display: var(--font-mono);
+  --font-body: var(--font-mono);
+  
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #2e3440;
+  --text-secondary: #5e81ac;
+  --text-muted: #6c757d;
+  --accent: #5e81ac;
+  --accent-hover: #4c566a;
+  --border: #e9ecef;
+  --link: #0066cc;
+  --link-hover: #004499;
+  
+  /* Spacing and effects */
+  --radius: 4px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --transition: all 0.2s ease;
+}
+
+[data-theme="dark"] {
+  /* Dark theme fonts - completely different aesthetic */
+  --font-display: 'Charter', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  
+  /* Dark theme colors */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #f0f6fc;
+  --text-secondary: #7d8590;
+  --text-muted: #6e7681;
+  --accent: #58a6ff;
+  --accent-hover: #388bfd;
+  --border: #30363d;
+  --link: #58a6ff;
+  --link-hover: #79c0ff;
+  
+  /* Enhanced effects for dark theme */
+  --shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: var(--transition);
+}
+
+/* Typography hierarchy */
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+.header {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.section-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.section-command {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Music widget */
+.music-widget img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Blog feed */
+.blog-post {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-title {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.blog-title:hover {
+  color: var(--link-hover);
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border);
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background-color: var(--bg-secondary);
+  text-decoration: none;
+}
+
+.social-link i {
+  width: 1.2rem;
+  color: var(--accent);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* Loading states */
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.loading-dot {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .nav {
+    justify-content: center;
+  }
+  
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
