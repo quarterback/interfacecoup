@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ron Bronson</title>
+  <meta name="description" content="Designer and strategist working at the intersection of public services, technology, and systems repair.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ron Bronson</h1>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>I'm a designer and strategist working at the intersection of public services, technology, and systems repair. Most recently, I was Head of Design at <a href="https://18f.org">18F</a>, where I led the agency's design practice. I was responsible for growing and sustaining a multidisciplinary team that shaped how design operated across dozens of high-impact government systems. I am also an incoming Assistant Professor of Practice in Urban Technology at the University of Michigan.</p>
+
+        <p>My academic work explores how public services actually function—and break—in practice. I study how policy gets turned into software, how tools and processes embed harm, and how we might build more resilient institutions through better design. Current areas of focus include digital workflows in public systems, the aesthetics of procedural trust, and the maintenance of legitimacy when core systems stop working.</p>
+
+        <p>Outside of work, I've been a radio news anchor, trivia host, and a state-title winning high school tennis coach. People tend to find me through skeeball, <a href="https://www.superpesis.fi/ajankohtaista/superpesis-yhdysvaltalainen-ron-bronson-toteutti-unelmansa-ja-matkusti-suomeen-katsomaan-pesapalloa">pesäpallo</a>, or that one time <a href="https://en.wikipedia.org/wiki/Tennis_polo">we invented a sport</a>. I also co-host the <a href="https://futureperfectbook.club">Future Perfect Book Club</a>.</p>
+      </section>
+
+      <section class="topics">
+        <h2>Areas of focus</h2>
+        <p>Public service design; government technology; systems thinking; infrastructure and repair; policy operationalization; digital workflows; institutional resilience.</p>
+      </section>
+
+      <section class="work">
+        <h2>Work</h2>
+        
+        <div class="work-category">
+          <h3>Current projects</h3>
+          <ul>
+            <li><a href="https://tensilefutures.com">Tensile Futures</a> – Strategy and design consulting</li>
+            <li><a href="https://futureperfectbook.club">Future Perfect Book Club</a> – Exploring speculative fiction and technology</li>
+          </ul>
+        </div>
+
+        <div class="work-category">
+          <h3>Writing and media</h3>
+          <ul>
+            <li><a href="https://blog.ronbronson.com">Blog</a> – Regular writing on design, systems, and technology</li>
+            <li><a href="/speaking.html">Speaking and media appearances</a></li>
+          </ul>
+        </div>
+
+        <div class="work-category">
+          <h3>Coaching and community</h3>
+          <ul>
+            <li><a href="/tennis.html">Tennis coaching</a> – State championship-winning high school coach</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="recent">
+        <h2>Recent writing</h2>
+        <ul id="blog-feed" class="post-list">
+          <li>Loading recent posts...</li>
+        </ul>
+      </section>
+
+      <section class="contact">
+        <h2>Elsewhere</h2>
+        <ul class="social-list">
+          <li><a href="https://bsky.app/profile/ronbronson.com">Bluesky</a></li>
+          <li><a href="https://last.fm/user/statechampion">Last.fm</a></li>
+          <li><a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961">Spotify</a></li>
+          <li><a href="https://music.apple.com/profile/ronbronson">Apple Music</a></li>
+          <li><a href="https://www.mixcloud.com/908RB/">Mixcloud</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Minimal RSS feed loading
+    async function loadRecentPosts() {
+      try {
+        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.ronbronson.com/feed.rss');
+        const data = await response.json();
+        const posts = data.items.slice(0, 5);
+        
+        const feedElement = document.getElementById('blog-feed');
+        feedElement.innerHTML = posts.map(post => 
+          `<li><a href="${post.link}">${post.title}</a></li>`
+        ).join('');
+      } catch (error) {
+        document.getElementById('blog-feed').innerHTML = '<li>Recent posts unavailable</li>';
+      }
+    }
+
+    loadRecentPosts();
+  </script>
+</body>
+</html>
