@@ -11,129 +11,99 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --color-bg: #f6fdfb;
-      --color-text: #1a1a1a;
-      --color-accent: #582f6b;
-      --color-hover: #7bd6bd;
-    }
-    body {
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      font-family: 'Space Grotesk', sans-serif;
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-    a {
-      color: var(--color-accent);
-      text-decoration: none;
-    }
-    a:hover {
-      color: var(--color-hover);
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 44rem;
-      margin: 0 auto;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.25rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.25rem;
-    }
-    li {
-      margin-bottom: 0.75rem;
-    }
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #ccc;
-      font-size: 0.875rem;
-      color: #555;
-    }
-  </style>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+
 <body>
   <div class="container">
-    <nav class="nav" style="display:flex; gap:2rem; margin-bottom:2rem; border-bottom:1px solid #ccc; padding-bottom:1rem;">
-      <a href="/">Home</a>
-      <a href="https://blog.ronbronson.com">Writing</a>
-      <a href="/now.html">Now</a>
-    </nav>
+    <header>
+      <h1><a href="/">Ron Bronson</a></h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/tennis.html">Coaching</a>
+        <a href="https://blog.ronbronson.com">Blog</a>
+        <a href="https://tensilefutures.com">Work</a>
+      </nav>
+    </header>
 
     <main>
-      <h1>Talks, Media & Projects</h1>
-      <p>
-        I’ve been speaking publicly for over a decade across design, technology, and public infrastructure. Some talks are on stage, others on mic, and occasionally inside malls or zines. This page includes selected speaking engagements, exhibitions, interviews, and long-running side projects.
-      </p>
+      <section class="intro">
+        <h2>Talks, Media & Projects</h2>
+        <p>I've been speaking publicly for over a decade across design, technology, and public infrastructure. Some talks are on stage, others on mic, and occasionally inside malls or zines. This page includes selected speaking engagements, exhibitions, interviews, and long-running side projects.</p>
+      </section>
 
-      <h2>Talks & Keynotes</h2>
-      <ul>
-        <li>2024 – <strong>Design For The Public</strong>, Wacom Experience Center / Revolution Hall, Portland</li>
-        <li>2023 – <strong>Outcome Conference</strong>, Chandigarh, India</li>
-        <li>2022 – <strong>Rosenfeld Media Civic Design Conference</strong></li>
-        <li>2021 – <strong>IXDA Oslo</strong>, Oslo, Norway</li>
-        <li>2020 – <strong>An Event Apart HCD</strong></li>
-        <li>2019 – <strong>UXR Conference</strong>, Toronto, Canada</li>
-        <li>2017 – <strong>Pixel Up!</strong>, Cape Town, South Africa</li>
-      </ul>
+      <section class="work">
+        <div class="work-category">
+          <h3>Talks & Keynotes</h3>
+          <ul>
+            <li>2024 – <strong>Design For The Public</strong>, Wacom Experience Center / Revolution Hall, Portland</li>
+            <li>2023 – <strong>Outcome Conference</strong>, Chandigarh, India</li>
+            <li>2022 – <strong>Rosenfeld Media Civic Design Conference</strong></li>
+            <li>2021 – <strong>IXDA Oslo</strong>, Oslo, Norway</li>
+            <li>2020 – <strong>An Event Apart HCD</strong></li>
+            <li>2019 – <strong>UXR Conference</strong>, Toronto, Canada</li>
+            <li>2017 – <strong>Pixel Up!</strong>, Cape Town, South Africa</li>
+          </ul>
+        </div>
 
-      <h2>Conference Talks & Workshops</h2>
-      <ul>
-        <li>2024 – University of Michigan College of Architecture & Urban Planning</li>
-        <li>2023 – ConveyUX / The Designer’s Share of the Problem</li>
-        <li>2022 – Federation of Tax Associates / Service Design</li>
-        <li>2020 – SDN Global Conference / Consequences in Service Design</li>
-        <li>2018 – Drupalcon Nashville / Migrating a Small City to Drupal</li>
-        <li>2017 – Design & Content Vancouver / Product Toolbox</li>
-        <li>2014 – Confab for Nonprofits / Managing Small Teams</li>
-        <li>2013 – Confab Higher Ed / Armies of One</li>
-      </ul>
+        <div class="work-category">
+          <h3>Conference Talks & Workshops</h3>
+          <ul>
+            <li>2024 – University of Michigan College of Architecture & Urban Planning</li>
+            <li>2023 – ConveyUX / The Designer's Share of the Problem</li>
+            <li>2022 – Federation of Tax Associates / Service Design</li>
+            <li>2020 – SDN Global Conference / Consequences in Service Design</li>
+            <li>2018 – Drupalcon Nashville / Migrating a Small City to Drupal</li>
+            <li>2017 – Design & Content Vancouver / Product Toolbox</li>
+            <li>2014 – Confab for Nonprofits / Managing Small Teams</li>
+            <li>2013 – Confab Higher Ed / Armies of One</li>
+          </ul>
+        </div>
 
-      <h2>Exhibitions & Installations</h2>
-      <ul>
-        <li>2024 – <strong>Manipulation Engineering</strong>, Wacom Experience Center, Portland</li>
-        <li>2023 – <strong>A Parliament of Neighbors</strong>, Lloyd Center Mall, Portland</li>
-        <li>2022 – <strong>The Designer’s Share of the Problem</strong>, Portland Design Festival</li>
-      </ul>
+        <div class="work-category">
+          <h3>Exhibitions & Installations</h3>
+          <ul>
+            <li>2024 – <strong>Manipulation Engineering</strong>, Wacom Experience Center, Portland</li>
+            <li>2023 – <strong>A Parliament of Neighbors</strong>, Lloyd Center Mall, Portland</li>
+            <li>2022 – <strong>The Designer's Share of the Problem</strong>, Portland Design Festival</li>
+          </ul>
+        </div>
 
-      <h2>Interviews & Features</h2>
-      <ul>
-        <li>2021 – <a href="https://jointfrontiers.com">Joint Frontiers Podcast</a></li>
-        <li>2021 – Revision Path</li>
-        <li>2021 - Surfacing Podcast</li>
-        <li>2020 – <a href="https://pixelpioneers.co/blog/building-better-user-centered-products-an-interview-with-ron-bronson">Pixel Pioneers Interview</a></li>
-        <li>2020 – Technically Speaking Podcast</li>
-        <li>2020 – Editor X Interview</li>
-        <li>2017 – Responsive Web Design Podcast</li>
-      </ul>
+        <div class="work-category">
+          <h3>Interviews & Features</h3>
+          <ul>
+            <li>2021 – <a href="https://jointfrontiers.com">Joint Frontiers Podcast</a></li>
+            <li>2021 – Revision Path</li>
+            <li>2021 – Surfacing Podcast</li>
+            <li>2020 – <a href="https://pixelpioneers.co/blog/building-better-user-centered-products-an-interview-with-ron-bronson">Pixel Pioneers Interview</a></li>
+            <li>2020 – Technically Speaking Podcast</li>
+            <li>2020 – Editor X Interview</li>
+            <li>2017 – Responsive Web Design Podcast</li>
+          </ul>
+        </div>
 
-      <h2>Selected Side Projects</h2>
-      <ul>
-        <li>2024 – <strong>Portland Design Month</strong> (Citywide showcase)</li>
-        <li>2017 – <strong>Indianapolis Design Week</strong> (Founder)</li>
-        <li>2016 – <strong>Pensulo Decks</strong> (Creative strategy cards)</li>
-        <li>2014 – <strong>Aggregate Conference</strong>, Louisville, KY</li>
-        <li>2004 – <strong>Tennis Polo (Toccer)</strong> — invented field sport</li>
-      </ul>
+        <div class="work-category">
+          <h3>Selected Side Projects</h3>
+          <ul>
+            <li>2024 – <strong>Portland Design Month</strong> (Citywide showcase)</li>
+            <li>2017 – <strong>Indianapolis Design Week</strong> (Founder)</li>
+            <li>2016 – <strong>Pensulo Decks</strong> (Creative strategy cards)</li>
+            <li>2014 – <strong>Aggregate Conference</strong>, Louisville, KY</li>
+            <li>2004 – <strong>Tennis Polo (Toccer)</strong> — invented field sport</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Elsewhere</h2>
+        <ul class="social-list">
+          <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
+          <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
+          <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
+          <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
+        </ul>
+      </section>
     </main>
-
-   <div class="social-icons">
-        <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
-        <a href="https://last.fm/user/statechampion" aria-label="Last.fm"><i class="fab fa-lastfm"></i></a>
-        <a href="https://open.spotify.com/user/ronbronson?si=5ec0411aaed34961" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-        <a href="https://music.apple.com/profile/ronbronson" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
-        <a href="https://www.mixcloud.com/908RB/" aria-label="Mixcloud"><i class="fab fa-mixcloud"></i></a>
-      </div>
-    </footer>
   </div>
 </body>
 </html>
