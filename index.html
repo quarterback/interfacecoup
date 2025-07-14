@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
 	<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
-</head>
 
 <body>
   <div class="container">
@@ -48,9 +47,9 @@
         </section>
 
         <section class="live-content">
-          <h2>Currently</h2>
-          <div class="bluesky-posts" id="bluesky-feed">
-            <p>Latest thoughts from Bluesky...</p>
+          <h2>Now Reading</h2>
+          <div class="reading-feed" id="reading-feed">
+            <p>Loading recent reads...</p>
           </div>
           
           <div class="music-widget">
@@ -85,7 +84,105 @@
   </div>
 
   <script>
-    // RSS feed loading
+    // Reading feed from Literal.club
+    async function loadReadingFeed() {
+      try {
+        // First get your profile ID
+        const profileQuery = `
+          query getProfileParts($handle: String!) {
+            profile(where: { handle: $handle }) {
+              id
+              handle
+              name
+            }
+          }
+        `;
+
+        const profileResponse = await fetch('https://literal.club/graphql/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: profileQuery,
+            variables: { handle: 'ron' }
+          })
+        });
+
+        const profileData = await profileResponse.json();
+        
+        if (!profileData.data?.profile?.id) {
+          throw new Error('Profile not found');
+        }
+
+        const profileId = profileData.data.profile.id;
+
+        // Get currently reading books
+        const booksQuery = `
+          query booksByReadingStateAndProfile(
+            $limit: Int!
+            $offset: Int!
+            $readingStatus: ReadingStatus!
+            $profileId: String!
+          ) {
+            booksByReadingStateAndProfile(
+              limit: $limit
+              offset: $offset
+              readingStatus: $readingStatus
+              profileId: $profileId
+            ) {
+              id
+              title
+              authors {
+                name
+              }
+              cover
+            }
+          }
+        `;
+
+        const booksResponse = await fetch('https://literal.club/graphql/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            query: booksQuery,
+            variables: {
+              limit: 3,
+              offset: 0,
+              readingStatus: 'IS_READING',
+              profileId: profileId
+            }
+          })
+        });
+
+        const booksData = await booksResponse.json();
+        const readingElement = document.getElementById('reading-feed');
+
+        if (booksData.data?.booksByReadingStateAndProfile?.length > 0) {
+          readingElement.innerHTML = booksData.data.booksByReadingStateAndProfile.map(book => `
+            <div class="reading-item">
+              <p><strong>${book.title}</strong></p>
+              <p>by ${book.authors.map(author => author.name).join(', ')}</p>
+            </div>
+          `).join('');
+        } else {
+          readingElement.innerHTML = `
+            <div class="reading-item">
+              <p>Check <a href="https://literal.club/ron/has-read">my reading list</a> on Literal.club</p>
+            </div>
+          `;
+        }
+      } catch (error) {
+        console.error('Error fetching reading list:', error);
+        document.getElementById('reading-feed').innerHTML = `
+          <div class="reading-item">
+            <p>Check <a href="https://literal.club/ron/has-read">my reading list</a> on Literal.club</p>
+          </div>
+        `;
+      }
+    }
     async function loadRecentPosts() {
       try {
         const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.ronbronson.com/feed.rss');
@@ -150,6 +247,7 @@
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       loadRecentPosts();
+      loadReadingFeed();
       
       // Load saved color scheme or use default
       const savedScheme = localStorage.getItem('colorScheme') || 'pink-dark';
