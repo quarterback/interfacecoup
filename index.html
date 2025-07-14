@@ -48,13 +48,13 @@
         </section>
 
         <section class="live-content">
-          <h2>Currently</h2>
+          <h2>On BlueSky</h2>
           <div class="bluesky-posts" id="bluesky-feed">
             <p>Latest thoughts from Bluesky...</p>
           </div>
           
           <div class="music-widget">
-            <h3>Listening to</h3>
+            <h3>Now Playing</h3>
             <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" alt="Recently played music from Last.fm" loading="lazy">
           </div>
         </section>
@@ -104,7 +104,7 @@
     // Bluesky posts loading
     async function loadBlueskyPosts() {
       try {
-        const response = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ronbronson.com&limit=3');
+        const response = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ronbronson.com&limit=8');
         const data = await response.json();
         
         const blueskyElement = document.getElementById('bluesky-feed');
