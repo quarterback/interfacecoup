@@ -53,6 +53,17 @@ header {
   letter-spacing: -0.03em;
 }
 
+.name-stack a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.name-stack a:hover .name-line {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
 .name-line {
   color: var(--accent-color);
 }
