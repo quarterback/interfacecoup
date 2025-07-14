@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
 	<link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+	<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
@@ -82,7 +84,7 @@
     </div>
   </div>
 
-  <script>
+ <script>
     // RSS feed loading
     async function loadRecentPosts() {
       try {
@@ -99,6 +101,43 @@
       }
     }
 
+    // Bluesky posts loading
+    async function loadBlueskyPosts() {
+      try {
+        const response = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=ronbronson.com&limit=3');
+        const data = await response.json();
+        
+        const blueskyElement = document.getElementById('bluesky-feed');
+        
+        if (data.feed && data.feed.length > 0) {
+          blueskyElement.innerHTML = data.feed.map(item => {
+            const post = item.post;
+            const text = post.record.text;
+            const createdAt = new Date(post.record.createdAt).toLocaleDateString();
+            
+            return `
+              <div class="bluesky-post">
+                <p>${text}</p>
+                <small>${createdAt}</small>
+              </div>
+            `;
+          }).join('');
+        } else {
+          blueskyElement.innerHTML = '<p>No recent posts found</p>';
+        }
+      } catch (error) {
+        console.error('Error fetching Bluesky posts:', error);
+        document.getElementById('bluesky-feed').innerHTML = '<p>Unable to load Bluesky posts</p>';
+      }
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      loadRecentPosts();
+      loadBlueskyPosts();
+    });
+
+	
     // Color scheme switching
     const colorSchemes = {
       'pink-dark': {
