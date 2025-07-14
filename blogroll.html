@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ron Bronson | Designer and Strategist</title>
-<meta name="description" content="Ron Bronson is a design executive, strategist & scholar who sometimes coaches tennis." />
-  <link rel="icon" href="/line.svg" type="image/svg+xml" />
-  <script src="https://unpkg.com/@unocss/runtime"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
-	<link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
-	<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogroll | Ron Bronson</title>
+  <meta name="description" content="Friends and folks from the internet Ron Bronson likes following.">
+  <link rel="icon" href="/line.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header>
-      <h1><a href="/">Ron Bronson</a></h1>
+      <div class="name-stack">
+        <a href="/">
+          <div class="name-line">RON</div>
+          <div class="name-line">BRONSON</div>
+        </a>
+      </div>
       <nav class="main-nav">
         <a href="/speaking.html">Media</a>
         <a href="/tennis.html">Coaching</a>
@@ -36,14 +40,98 @@
         <div class="work-category">
           <ul>
             <li><a href="https://mrmrs.cc/">Adam Morse</a></li>
-            <li><a href="https://joelgoodman.co/">Joel Goodman</li>
-            <li><a href="https://asterisms.lol/">Andy Welfie</li>
-            <li><a href="https://thefutureislikepie.beehiiv.com/">Lisa Maria Marquis</li>
-            <li><a href="https://buttondown.com/dorian/archive/">Dorian Taylor</li>
+            <li><a href="https://joelgoodman.co/">Joel Goodman</a></li>
+            <li><a href="https://asterisms.lol/">Andy Welfie</a></li>
+            <li><a href="https://thefutureislikepie.beehiiv.com/">Lisa Maria Marquis</a></li>
+            <li><a href="https://buttondown.com/dorian/archive/">Dorian Taylor</a></li>
           </ul>
         </div>
       </section>
+
+      <section class="contact">
+        <h2>Elsewhere</h2>
+        <ul class="social-list">
+          <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
+          <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
+          <li><a href="https://letterboxd.com/ronbronson/"><i class="fas fa-film"></i></a></li>
+          <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
+          <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
+          <li><a href="mailto:contact@ronbronson.com"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="/blogroll.html">Blogroll</a></li>
+        </ul>
+      </section>
     </main>
+
+    <!-- Color scheme selector -->
+    <div class="color-schemes">
+      <button class="scheme-btn" data-scheme="pink-dark">●</button>
+      <button class="scheme-btn" data-scheme="navy-yellow">●</button>
+      <button class="scheme-btn" data-scheme="purple-cream">●</button>
+      <button class="scheme-btn" data-scheme="brown-burgundy">●</button>
+      <button class="scheme-btn" data-scheme="teal-purple">●</button>
+    </div>
   </div>
+
+  <script>
+    // Color scheme switching
+    const colorSchemes = {
+      'pink-dark': {
+        bg: '#2f0217',
+        text: '#fb74a9',
+        accent: '#fb74a9',
+        muted: '#a8527a'
+      },
+      'navy-yellow': {
+        bg: '#030712',
+        text: '#facc15',
+        accent: '#facc15',
+        muted: '#b8941f'
+      },
+      'purple-cream': {
+        bg: '#8d063c',
+        text: '#fefce4',
+        accent: '#fefce4',
+        muted: '#e5dfc7'
+      },
+      'brown-burgundy': {
+        bg: '#3a1f1f',
+        text: '#e0cb57',
+        accent: '#e0cb57',
+        muted: '#b8a045'
+      },
+      'teal-purple': {
+        bg: '#111d2e',
+        text: '#c3a8f5',
+        accent: '#c3a8f5',
+        muted: '#9b7dc7'
+      }
+    };
+
+    function applyColorScheme(schemeName) {
+      const scheme = colorSchemes[schemeName];
+      if (!scheme) return;
+
+      document.documentElement.style.setProperty('--bg-color', scheme.bg);
+      document.documentElement.style.setProperty('--text-color', scheme.text);
+      document.documentElement.style.setProperty('--accent-color', scheme.accent);
+      document.documentElement.style.setProperty('--muted-color', scheme.muted);
+      
+      localStorage.setItem('colorScheme', schemeName);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load saved color scheme or use default
+      const savedScheme = localStorage.getItem('colorScheme') || 'pink-dark';
+      applyColorScheme(savedScheme);
+      
+      // Color scheme buttons
+      document.querySelectorAll('.scheme-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyColorScheme(btn.dataset.scheme);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
