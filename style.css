@@ -1,7 +1,28 @@
+*/
+@font-face {
+    font-family: 'Snoqualmie-Medium';
+    src: url('/fonts/snoqualmie-medium.eot');
+    src: url('/fonts/snoqualmie-medium.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/snoqualmie-medium.woff2') format('woff2'),
+         url('/fonts/snoqualmie-medium.woff') format('woff'),
+         url('/fonts/snoqualmie-medium.ttf') format('truetype'),
+         url('/fonts/snoqualmie-medium.svg#youworkforthem') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Margo-and-Marcel';
+    src: url('/fonts/margo-and-marcel.woff2') format('woff2'),
+         url('/fonts/margo-and-marcel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Custom font variables and color scheme variables */
 :root {
-  --font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Margo-and-Marcel', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Snoqualmie-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   
   /* Default color scheme - will be overridden by JS */
   --bg-color: #2f0217;
