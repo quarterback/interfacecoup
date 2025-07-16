@@ -1,3 +1,17 @@
+/*
+Font:       Snoqualmie
+Style:      Medium
+URL:        https://youworkforthem.com/font/T27900/snoqualmie
+Foundry:    Komet & Flicker
+Foundry:    https://youworkforthem.com/designer/2072/komet-amp-flicker
+Copyright:  Copyright © 2024 by Komet & Flicker.
+Version:    17
+Created:    February 20, 2025
+License:    https://www.youworkforthem.com/font-license
+License:    The WebFont(s) listed in this document must follow the YouWorkForThem
+            WebFont license rules. All other parties are strictly restricted
+            from using the WebFonts(s) listed without a purchased license.
+            All details above must always remain unaltered and visible in your CSS.
 */
 @font-face {
     font-family: 'Snoqualmie-Medium';
@@ -11,6 +25,12 @@
     font-style: normal;
 }
 
+/*
+Font:       Margo and Marcel
+Style:      Regular
+URL:        https://youworkforthem.com/font/T29612/margo-and-marcel
+Foundry:    Komet & Flicker
+*/
 @font-face {
     font-family: 'Margo-and-Marcel';
     src: url('/fonts/margo-and-marcel.woff2') format('woff2'),
@@ -54,35 +74,6 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 60px 20px;
-}
-
-/* Reading feed styling */
-.reading-feed {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid var(--muted-color);
-  border-radius: 4px;
-}
-
-.reading-item {
-  padding: 15px 0;
-  border-bottom: 1px solid var(--muted-color);
-  margin-bottom: 15px;
-}
-
-.reading-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-
-.reading-item p {
-  margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.reading-item strong {
-  color: var(--accent-color);
 }
 
 /* Header with stacked name */
@@ -156,7 +147,6 @@ section:last-child {
 }
 
 /* Typography hierarchy - full h1-h6 */
-
 h1 {
   font-family: var(--font-display);
   font-size: 48px;
@@ -166,6 +156,7 @@ h1 {
   margin-bottom: 32px;
   line-height: 1.1;
 }
+
 h2 {
   font-family: var(--font-display);
   font-size: 32px;
@@ -214,6 +205,7 @@ h6 {
   letter-spacing: 0.05em;
   line-height: 1.4;
 }
+
 /* Paragraphs */
 p {
   margin-bottom: 20px;
@@ -293,14 +285,36 @@ li:last-child {
   border-bottom: none;
 }
 
-/* Live content styling */
-.bluesky-posts {
+/* Reading feed styling */
+.reading-feed {
   margin-bottom: 30px;
   padding: 20px;
   border: 1px solid var(--muted-color);
   border-radius: 4px;
 }
 
+.reading-item {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--muted-color);
+  margin-bottom: 15px;
+}
+
+.reading-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.reading-item p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.reading-item strong {
+  color: var(--accent-color);
+}
+
+/* Live content styling */
 .music-widget {
   margin-top: 30px;
 }
@@ -431,17 +445,6 @@ li:last-child {
   text-align: right;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .talk-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-  
-  .talk-venue {
-    text-align: left;
-  }
-
 /* Now page specific styles */
 .last-updated {
   font-size: 14px;
@@ -528,6 +531,15 @@ li:last-child {
     padding: 15px 20px;
     font-size: 18px;
     margin: 20px 0;
+  }
+  
+  .talk-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  
+  .talk-venue {
+    text-align: left;
   }
 }
 
