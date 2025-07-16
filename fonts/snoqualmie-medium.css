@@ -1,0 +1,27 @@
+/*
+Font: 		Snoqualmie
+Style: 		Medium
+URL: 		https://youworkforthem.com/font/T27900/snoqualmie
+Foundry: 	Komet & Flicker
+Foundry: 	https://youworkforthem.com/designer/2072/komet-amp-flicker
+Copyright:	Copyright © 2024 by Komet & Flicker.
+Version: 	17
+Created:	February 20, 2025
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'Snoqualmie-Medium';
+	src: url('snoqualmie-medium.eot');
+	src: url('snoqualmie-medium.eot?#iefix') format('embedded-opentype'),
+             url('snoqualmie-medium.woff2') format('woff2'),
+	     url('snoqualmie-medium.woff') format('woff'),
+	     url('snoqualmie-medium.ttf') format('truetype'),
+	     url('snoqualmie-medium.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

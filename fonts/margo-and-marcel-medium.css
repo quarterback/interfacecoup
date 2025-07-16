@@ -1,0 +1,27 @@
+/*
+Font: 		Margo and Marcel
+Style: 		Medium
+URL: 		https://youworkforthem.com/font/T29612/margo-and-marcel
+Foundry: 	Komet & Flicker
+Foundry: 	https://youworkforthem.com/designer/2072/komet-amp-flicker
+Copyright:	Copyright © 2025 by Komet & Flicker.
+Version: 	17
+Created:	July 06, 2025
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'MargoandMarcel-Medium';
+	src: url('margo-and-marcel-medium.eot');
+	src: url('margo-and-marcel-medium.eot?#iefix') format('embedded-opentype'),
+             url('margo-and-marcel-medium.woff2') format('woff2'),
+	     url('margo-and-marcel-medium.woff') format('woff'),
+	     url('margo-and-marcel-medium.ttf') format('truetype'),
+	     url('margo-and-marcel-medium.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
