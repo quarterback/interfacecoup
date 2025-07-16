@@ -84,10 +84,11 @@ header {
   margin-bottom: 60px;
   border-bottom: 1px solid var(--muted-color);
   padding-bottom: 30px;
+            
 }
 
 .name-stack {
-  font-family: var(--font-display);
+  font-family: 'Margo-and-Marcel', 'Snoqualmie-Medium', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 48px;
   font-weight: 700;
   line-height: 0.8;
