@@ -10,17 +10,17 @@
   --font-display: var(--font-mono);
   --font-body: var(--font-mono);
   
-  /* Light theme colors */
+/* Ultra-minimal light theme */
   --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #2e3440;
-  --text-secondary: #5e81ac;
-  --text-muted: #6c757d;
-  --accent: #5e81ac;
-  --accent-hover: #4c566a;
-  --border: #e9ecef;
+  --bg-secondary: #fafafa;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --accent: #0066cc;
+  --accent-hover: #0052a3;
+  --border: #e5e5e5;
   --link: #0066cc;
-  --link-hover: #004499;
+  --link-hover: #0052a3;
   
   /* Spacing and effects */
   --radius: 4px;
