@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaking — Ron Bronson</title>
+  <meta name="description" content="Talks, interviews, and presentations" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    :root {
+      /* Color scheme variables */
+      --bg-primary: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --text-muted: #8a8a8a;
+      --accent: #dc2626;
+      --border: #e5e5e5;
+    }
+
+    body {
+      font-family: 'Charter', 'Georgia', serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .font-display {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Color schemes */
+    .scheme-blue {
+      --bg-primary: #fafafa;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --accent: #1e40af;
+      --border: #e2e8f0;
+    }
+
+    .scheme-green {
+      --bg-primary: #fefffe;
+      --text-primary: #14532d;
+      --text-secondary: #374151;
+      --text-muted: #9ca3af;
+      --accent: #059669;
+      --border: #d1d5db;
+    }
+  </style>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'serif': ['Charter', 'Georgia', 'serif'],
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body style="background: var(--bg-primary); color: var(--text-primary);">
+  <div class="max-w-4xl mx-auto px-6 py-8">
+    <!-- Header -->
+    <header class="mb-12 pb-6 border-b" style="border-color: var(--border);">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="font-sans text-2xl font-semibold mb-2">
+            <a href="/" class="no-underline" style="color: var(--text-primary);">Ron Bronson</a>
+          </h1>
+        </div>
+        <nav class="flex gap-6 font-sans text-sm">
+          <a href="/" class="no-underline" style="color: var(--text-secondary);">Home</a>
+          <a href="/speaking.html" class="no-underline font-medium" style="color: var(--accent);">Speaking</a>
+          <a href="/now.html" class="no-underline" style="color: var(--text-secondary);">Now</a>
+          <a href="https://blog.ronbronson.com" class="no-underline" style="color: var(--text-secondary);">Writing</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="mb-8">
+        <h2 class="font-sans text-sm font-medium uppercase tracking-wide mb-4" style="color: var(--text-muted);">Speaking</h2>
+        <p class="text-lg leading-relaxed mb-6">Talks, interviews, and presentations about design, systems, and institutional change.</p>
+      </div>
+
+      <!-- Recent Talks -->
+      <section class="mb-12">
+        <h3 class="font-sans text-base font-medium mb-6" style="color: var(--text-primary);">Recent Talks</h3>
+        
+        <div class="space-y-6">
+          <div class="border-b pb-4" style="border-color: var(--border);">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="font-medium mb-1">AI Agents and the Web: How Developers Can Build Smarter with Agent Experience</h4>
+                <p class="text-sm" style="color: var(--text-muted);">Webinar</p>
+              </div>
+              <div class="font-sans text-sm font-medium" style="color: var(--text-secondary);">Jun 2025</div>
+            </div>
+          </div>
+
+          <div class="border-b pb-4" style="border-color: var(--border);">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="font-medium mb-1">Leading From Where You Are</h4>
+                <p class="text-sm" style="color: var(--text-muted);">Bloomberg Industry Summit</p>
+              </div>
+              <div class="font-sans text-sm font-medium" style="color: var(--text-secondary);">Apr 2025</div>
+            </div>
+          </div>
+
+          <div class="border-b pb-4" style="border-color: var(--border);">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="font-medium mb-1">US Forest Service ACIO Trailhead Summit</h4>
+                <p class="text-sm" style="color: var(--text-muted);">Keynote on Service Delivery & Innovation</p>
+              </div>
+              <div class="font-sans text-sm font-medium" style="color: var(--text-secondary);">Jul 2025</div>
+            </div>
+          </div>
+
+          <div class="border-b pb-4" style="border-color: var(--border);">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+              <div class="flex-1">
+                <h4 class="font-medium mb-1">Sprinkle Some AI On It: Service Design, Consequences & How Tech Disrupts Everyday Life</h4>
+                <p class="text-sm" style="color: var(--text-muted);">University of Michigan College of Architecture & Urban Planning</p>
+              </div>
+              <div class="font-sans text-sm font-medium" style="color: var(--text-secondary);">Apr 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="/full-speaking-list.html" class="font-sans text-sm" style="color: var(--accent);">
+            View all talks →
+          </a>
+        </div>
+      </section>
+
+      <!-- Interviews -->
+      <section class="mb-12">
+        <h3 class="font-sans text-base font-medium mb-6" style="color: var(--text-primary);">Interviews & Media</h3>
+        
+        <div class="space-y-4">
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <a href="https://codeforamerica.org/news/leading-the-field-ron-bronson/" 
+               class="block font-medium mb-1 no-underline" style="color: var(--text-primary);">
+              Leading the Field: Ron Bronson
+            </a>
+            <p class="text-sm" style="color: var(--text-muted);">Code for America (2025)</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <a href="https://www.ixda.no/talks/the-designers-share-of-the-problem" 
+               class="block font-medium mb-1 no-underline" style="color: var(--text-primary);">
+              The Designer's Share of the Problem
+            </a>
+            <p class="text-sm" style="color: var(--text-muted);">IXDA Oslo (2021)</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <a href="https://open.spotify.com/episode/2lC2xrhf4PIasyzJW4faP7" 
+               class="block font-medium mb-1 no-underline" style="color: var(--text-primary);">
+              Surfacing podcast
+            </a>
+            <p class="text-sm" style="color: var(--text-muted);">with Lisa Welchman & Andy Vitale (2021)</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <a href="https://responsivewebdesign.com/podcast/ron-bronson/" 
+               class="block font-medium mb-1 no-underline" style="color: var(--text-primary);">
+              Responsive Web Design podcast
+            </a>
+            <p class="text-sm" style="color: var(--text-muted);">(2017)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-12">
+        <h3 class="font-sans text-base font-medium mb-6" style="color: var(--text-primary);">Exhibitions & Projects</h3>
+        
+        <div class="space-y-4">
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <h4 class="font-medium mb-1">Design For The Public Conference</h4>
+            <p class="text-sm" style="color: var(--text-muted);">Oct 2024 — Wacom Experience Center/Revolution Hall, Portland</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <h4 class="font-medium mb-1">A Parliament of Neighbors</h4>
+            <p class="text-sm" style="color: var(--text-muted);">May 2023 — Lloyd Center Mall, Portland</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <h4 class="font-medium mb-1">Designer's Share of the Problem</h4>
+            <p class="text-sm" style="color: var(--text-muted);">Oct 2022 — Portland Design Festival</p>
+          </div>
+
+          <div class="border-b pb-3" style="border-color: var(--border);">
+            <h4 class="font-medium mb-1">The Hidden Cost of Everything: Decentering the user experience</h4>
+            <p class="text-sm" style="color: var(--text-muted);">Oct 2021 — zine</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="border-t pt-8" style="border-color: var(--border);">
+        <h3 class="font-sans text-base font-medium mb-4" style="color: var(--text-primary);">Speaking Inquiries</h3>
+        <p class="mb-4">Available for talks, panels, workshops, and interviews.</p>
+        <a href="mailto:contact@ronbronson.com" class="font-sans text-sm" style="color: var(--accent);">
+          contact@ronbronson.com
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t" style="border-color: var(--border);">
+      <div class="flex justify-between items-center">
+        <div class="flex gap-4">
+          <a href="https://bsky.app/profile/ronbronson.com" class="text-lg" style="color: var(--text-muted);">
+            <i class="fa-solid fa-cloud"></i>
+          </a>
+          <a href="https://last.fm/user/statechampion" class="text-lg" style="color: var(--text-muted);">
+            <i class="fab fa-lastfm"></i>
+          </a>
+          <a href="mailto:contact@ronbronson.com" class="text-lg" style="color: var(--text-muted);">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="font-sans text-xs" style="color: var(--text-muted);">
+          Charter & Inter
+        </p>
+      </div>
+    </footer>
+
+    <!-- Color scheme toggle -->
+    <div class="fixed top-4 right-4 flex gap-2">
+      <button class="w-4 h-4 rounded-full bg-red-600 border-0 cursor-pointer" onclick="applyColorScheme('red')"></button>
+      <button class="w-4 h-4 rounded-full bg-blue-600 border-0 cursor-pointer" onclick="applyColorScheme('blue')"></button>
+      <button class="w-4 h-4 rounded-full bg-green-600 border-0 cursor-pointer" onclick="applyColorScheme('green')"></button>
+    </div>
+  </div>
+
+  <script>
+    function applyColorScheme(scheme) {
+      document.body.className = scheme !== 'red' ? `scheme-${scheme}` : '';
+      localStorage.setItem('colorScheme', scheme);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedScheme = localStorage.getItem('colorScheme') || 'red';
+      applyColorScheme(savedScheme);
+    });
+  </script>
+</body>
+</html>
