@@ -6,395 +6,92 @@
   <title>Ron Bronson</title>
   <meta name="description" content="Designer who works across different contexts to understand how systems function and fail." />
   
-  <!-- Using Charter and Inter as font examples -->
-  <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom Typography CSS -->
+  <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  
-  <style>
-    :root {
-      /* Color scheme variables - easily swappable */
-      --bg-primary: #fefefe;
-      --bg-secondary: #f8f8f8;
-      --text-primary: #1a1a1a;
-      --text-secondary: #4a4a4a;
-      --text-muted: #8a8a8a;
-      --accent: #c2410c;
-      --accent-light: #fed7aa;
-      --border: #e5e5e5;
-    }
-
-    /* Typography system */
-    html {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    body {
-      font-family: 'Charter', 'Georgia', serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Layout container */
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    /* Header */
-    .header {
-      margin-bottom: 3rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .name {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .nav {
-      display: flex;
-      gap: 1.5rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-    }
-
-    .nav a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: var(--accent);
-    }
-
-    /* Main content typography */
-    .intro {
-      font-size: 1.25rem;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-      color: var(--text-primary);
-    }
-
-    .intro strong {
-      font-weight: 700;
-    }
-
-    h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 2.5rem 0 1rem 0;
-      color: var(--text-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-      line-height: 1.7;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Links */
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Lists */
-    .simple-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-
-    .simple-list li {
-      margin-bottom: 0.5rem;
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    .simple-list li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    /* Social links */
-    .social {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 0.75rem;
-      background: var(--bg-secondary);
-      border-radius: 4px;
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      transition: all 0.2s ease;
-    }
-
-    .social-link:hover {
-      background: var(--accent-light);
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .social-link i {
-      width: 14px;
-      text-align: center;
-    }
-
-    /* Music widget */
-    .music-section {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: var(--bg-secondary);
-      border-radius: 6px;
-    }
-
-    .music-section h3 {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .music-widget img {
-      width: 100%;
-      border-radius: 4px;
-    }
-
-    /* Blog feed */
-    .blog-section {
-      margin: 2rem 0;
-    }
-
-    .blog-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-
-    .blog-list li {
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .blog-list li:last-child {
-      border-bottom: none;
-    }
-
-    .blog-list a {
-      color: var(--text-primary);
-      text-decoration: none;
-      line-height: 1.4;
-    }
-
-    .blog-list a:hover {
-      color: var(--accent);
-    }
-
-    /* Footer */
-    .footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    /* Color scheme toggle */
-    .color-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .color-btn {
-      width: 20px;
-      height: 20px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .color-btn:hover {
-      transform: scale(1.1);
-    }
-
-    .color-btn[data-scheme="orange"] { background: #c2410c; }
-    .color-btn[data-scheme="blue"] { background: #1e40af; }
-    .color-btn[data-scheme="green"] { background: #059669; }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .container {
-        padding: 1.5rem 1rem;
-      }
-      
-      .nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      
-      .intro {
-        font-size: 1.1rem;
-      }
-      
-      .social-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    /* Alternative color schemes */
-    .scheme-blue {
-      --bg-primary: #fafafa;
-      --bg-secondary: #f1f5f9;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-muted: #94a3b8;
-      --accent: #1e40af;
-      --accent-light: #dbeafe;
-      --border: #e2e8f0;
-    }
-
-    .scheme-green {
-      --bg-primary: #fefffe;
-      --bg-secondary: #f0fdf4;
-      --text-primary: #14532d;
-      --text-secondary: #374151;
-      --text-muted: #9ca3af;
-      --accent: #059669;
-      --accent-light: #d1fae5;
-      --border: #d1d5db;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <!-- Header -->
     <header class="header">
-      <div class="name">Ron Bronson</div>
+      <h1>Ron Bronson</h1>
       <nav class="nav">
         <a href="/speaking.html">Speaking</a>
-        <a href="https://blog.ronbronson.com">Writing</a>
         <a href="/now.html">Now</a>
+        <a href="https://blog.ronbronson.com">Writing</a>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-      <div class="intro">
-        <strong>I work at the intersection of design and institutional power.</strong> Most of my career has been spent figuring out how organizations actually function, why their systems break down, and what it takes to build something better.
-      </div>
+      <!-- Intro Section -->
+      <section class="section">
+        <p>[Your actual content here - I'll leave this for you to write since you mentioned my previous attempts missed the mark]</p>
+      </section>
 
-      <p>People get confused looking at my background because it doesn't fit neat categories. I've led design teams at federal agencies, taught at universities, coached high school tennis, and organized design communities across multiple cities. But there's a through-line: I'm interested in how systems work, how they fail, and how technology gets deployed to either strengthen or fracture social bonds.</p>
+      <!-- Current Work -->
+      <section class="section">
+        <h2>Current Work</h2>
+        <p>[Your content about current projects and research]</p>
+      </section>
 
-      <p>Most recently I was at 18F, where I scaled design practices across federal agencies and led digital transformation efforts affecting millions of people. These days I teach at the University of Michigan, research how platforms disrupt public trust, and work on projects that examine the intentional engineering of systemic failure.</p>
-
-      <p>My work spans service design, organizational change, and critical research. I've built design capabilities in environments where traditional approaches don't work—places with legacy systems, complex stakeholder relationships, and real constraints. I'm particularly interested in how design leadership functions in institutional settings and what it takes to create sustainable change in bureaucratic environments.</p>
-
-      <h2>Current Work</h2>
-      <p>I'm exploring how technology is engineered to concentrate power and fragment collective action. This research happens through exhibitions, speculative projects, and academic work that examines the mechanics of institutional breakdown.</p>
-
-      <p>I also organize design communities, including Portland Design Month and various civic tech initiatives. I believe in building connections between practitioners working in mission-critical environments.</p>
-
-      <div class="blog-section">
+      <!-- Recent Writing -->
+      <section class="section">
         <h2>Recent Writing</h2>
-        <ul id="blog-feed" class="blog-list">
-          <li>Loading recent posts...</li>
-        </ul>
-      </div>
-
-      <div class="music-section">
-        <h3>Currently Listening</h3>
-        <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" alt="Recently played music" loading="lazy">
-      </div>
-
-      <h2>Other Contexts</h2>
-      <ul class="simple-list">
-        <li>I coach high school tennis and think about systems at every scale</li>
-        <li>I'm President Emeritus of AIGA Portland</li>
-        <li>I founded design convenings in cities across the US</li>
-        <li>I speak globally on design leadership and platform power</li>
-      </ul>
-
-      <div class="social">
-        <h2>Elsewhere</h2>
-        <div class="social-grid">
-          <a href="https://bsky.app/profile/ronbronson.com" class="social-link">
-            <i class="fa-solid fa-cloud"></i> Bluesky
-          </a>
-          <a href="https://last.fm/user/statechampion" class="social-link">
-            <i class="fab fa-lastfm"></i> Last.fm
-          </a>
-          <a href="https://open.spotify.com/user/ronbronson" class="social-link">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-          <a href="mailto:contact@ronbronson.com" class="social-link">
-            <i class="fas fa-envelope"></i> Email
-          </a>
-          <a href="/blogroll.html" class="social-link">
-            <i class="fas fa-link"></i> Blogroll
-          </a>
-          <a href="https://tensilefutures.com" class="social-link">
-            <i class="fas fa-briefcase"></i> Portfolio
-          </a>
+        <div id="blog-feed">
+          <p>Loading recent posts...</p>
         </div>
-      </div>
+      </section>
+
+      <!-- Music -->
+      <section class="section">
+        <h2>Currently Listening</h2>
+        <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" 
+             alt="Recently played music" 
+             loading="lazy" 
+             style="width: 100%; max-width: 400px; border-radius: 4px;">
+      </section>
+
+      <!-- Other Context -->
+      <section class="section">
+        <h2>Other Context</h2>
+        <ul>
+          <li>Teaching at University of Michigan</li>
+          <li>President Emeritus of AIGA Portland</li>
+          <li>Coaching high school tennis</li>
+          <li>Organizing design communities across multiple cities</li>
+        </ul>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>Hand-coded with care. Typography: Charter & Inter.</p>
+      <div class="social-links">
+        <a href="https://bsky.app/profile/ronbronson.com" aria-label="Bluesky">
+          <i class="fa-solid fa-cloud"></i>
+        </a>
+        <a href="https://last.fm/user/statechampion" aria-label="Last.fm">
+          <i class="fab fa-lastfm"></i>
+        </a>
+        <a href="https://open.spotify.com/user/ronbronson" aria-label="Spotify">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="mailto:contact@ronbronson.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="/blogroll.html">Blogroll</a>
+      </div>
+      <p>Typography: Little Grandad & MIT Quailav</p>
     </footer>
 
     <!-- Color scheme toggle -->
-    <div class="color-toggle">
-      <button class="color-btn" data-scheme="orange"></button>
-      <button class="color-btn" data-scheme="blue"></button>
-      <button class="color-btn" data-scheme="green"></button>
+    <div style="position: fixed; top: 1rem; right: 1rem; display: flex; gap: 0.5rem; z-index: 100;">
+      <button onclick="applyColorScheme('red')" 
+              style="width: 16px; height: 16px; border: none; border-radius: 50%; background: #dc2626; cursor: pointer;"></button>
+      <button onclick="applyColorScheme('blue')" 
+              style="width: 16px; height: 16px; border: none; border-radius: 50%; background: #1e40af; cursor: pointer;"></button>
+      <button onclick="applyColorScheme('green')" 
+              style="width: 16px; height: 16px; border: none; border-radius: 50%; background: #059669; cursor: pointer;"></button>
     </div>
   </div>
 
@@ -407,17 +104,21 @@
         const posts = data.items.slice(0, 4);
         
         const feedElement = document.getElementById('blog-feed');
-        feedElement.innerHTML = posts.map(post => 
-          `<li><a href="${post.link}">${post.title}</a></li>`
-        ).join('');
+        if (posts.length > 0) {
+          feedElement.innerHTML = posts.map(post => 
+            `<p><a href="${post.link}">${post.title}</a></p>`
+          ).join('');
+        } else {
+          feedElement.innerHTML = '<p>Recent posts unavailable</p>';
+        }
       } catch (error) {
-        document.getElementById('blog-feed').innerHTML = '<li>Recent posts unavailable</li>';
+        document.getElementById('blog-feed').innerHTML = '<p>Recent posts unavailable</p>';
       }
     }
 
     // Color scheme switching
     function applyColorScheme(scheme) {
-      document.body.className = scheme !== 'orange' ? `scheme-${scheme}` : '';
+      document.body.className = scheme !== 'red' ? `scheme-${scheme}` : '';
       localStorage.setItem('colorScheme', scheme);
     }
 
@@ -426,15 +127,8 @@
       loadRecentPosts();
       
       // Load saved color scheme
-      const savedScheme = localStorage.getItem('colorScheme') || 'orange';
+      const savedScheme = localStorage.getItem('colorScheme') || 'red';
       applyColorScheme(savedScheme);
-      
-      // Color scheme buttons
-      document.querySelectorAll('.color-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          applyColorScheme(btn.dataset.scheme);
-        });
-      });
     });
   </script>
 </body>
