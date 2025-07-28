@@ -3,25 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ron Bronson | Designer and Strategist</title>
-<meta name="description" content="Ron Bronson is a design executive, strategist & scholar who sometimes coaches tennis." />
+  <title>Ron Bronson | Designer and Strategist</title>
+  <meta name="description" content="Ron Bronson is a design executive, strategist & scholar who sometimes coaches tennis." />
   <link rel="icon" href="/line.svg" type="image/svg+xml" />
-  <script src="https://unpkg.com/@unocss/runtime"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css" />
-	<link rel="stylesheet" href="/style.css">
+  
+  <!-- Custom Typography CSS -->
+  <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
-	<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
 
+  <style>
+    /* Additional styles for this specific layout */
+    .name-stack {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .name-line {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: normal;
+      line-height: 0.9;
+      color: var(--text-primary);
+    }
+    
+    .intro {
+      margin-bottom: var(--spacing-xxl);
+    }
+    
+    .intro strong {
+      font-weight: bold;
+    }
+    
+    .two-column-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-xxl);
+      margin-bottom: var(--spacing-xxl);
+    }
+    
+    .post-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .post-list li {
+      margin-bottom: var(--spacing-sm);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .post-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .post-list a {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    
+    .post-list a:hover {
+      color: var(--accent);
+    }
+    
+    .reading-feed {
+      background: var(--bg-secondary);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .reading-item {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .reading-item p {
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .music-widget img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    
+    .social-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      list-style: none;
+      padding: 0;
+    }
+    
+    .social-list a {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+    
+    .social-list a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    /* Color scheme toggle */
+    .color-schemes {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+    
+    .scheme-btn {
+      width: 16px;
+      height: 16px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .scheme-btn:hover {
+      transform: scale(1.1);
+    }
+    
+    .scheme-btn[data-scheme="pink-dark"] { background: #fb74a9; }
+    .scheme-btn[data-scheme="navy-yellow"] { background: #facc15; }
+    .scheme-btn[data-scheme="purple-cream"] { background: #fefce4; }
+    .scheme-btn[data-scheme="brown-burgundy"] { background: #e0cb57; }
+    .scheme-btn[data-scheme="teal-purple"] { background: #c3a8f5; }
+    
+    /* Color scheme overrides */
+    .scheme-pink-dark {
+      --bg-primary: #2f0217;
+      --bg-secondary: #3d1628;
+      --text-primary: #fb74a9;
+      --text-secondary: #e89bb8;
+      --text-muted: #a8527a;
+      --accent: #fb74a9;
+      --border: #4a2332;
+    }
+    
+    .scheme-navy-yellow {
+      --bg-primary: #030712;
+      --bg-secondary: #1f2937;
+      --text-primary: #facc15;
+      --text-secondary: #fde047;
+      --text-muted: #b8941f;
+      --accent: #facc15;
+      --border: #374151;
+    }
+    
+    .scheme-purple-cream {
+      --bg-primary: #8d063c;
+      --bg-secondary: #a11649;
+      --text-primary: #fefce4;
+      --text-secondary: #fef9c3;
+      --text-muted: #e5dfc7;
+      --accent: #fefce4;
+      --border: #b52856;
+    }
+    
+    .scheme-brown-burgundy {
+      --bg-primary: #3a1f1f;
+      --bg-secondary: #4a2a2a;
+      --text-primary: #e0cb57;
+      --text-secondary: #f5e178;
+      --text-muted: #b8a045;
+      --accent: #e0cb57;
+      --border: #5a3a3a;
+    }
+    
+    .scheme-teal-purple {
+      --bg-primary: #111d2e;
+      --bg-secondary: #1e2938;
+      --text-primary: #c3a8f5;
+      --text-secondary: #d4bbf7;
+      --text-muted: #9b7dc7;
+      --accent: #c3a8f5;
+      --border: #2a3441;
+    }
+    
+    @media (max-width: 768px) {
+      .two-column-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+      
+      .name-line {
+        font-size: 2rem;
+      }
+      
+      .social-list {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
 <body>
   <div class="container">
-    <header>
+    <header class="header">
       <div class="name-stack">
         <div class="name-line">RON</div>
         <div class="name-line">BRONSON</div>
       </div>
-      <nav class="main-nav">
+      <nav class="nav">
         <a href="/speaking.html">Speaking</a>
         <a href="https://blog.ronbronson.com">Blog</a>
         <a href="https://tensilefutures.com">Work</a>
@@ -30,13 +215,13 @@
 
     <main>
       <section class="intro">
-<p><strong>Ron Bronson is a service designer who works across complex organizations to untangle siloed delivery, slow decision-making, and system-wide fragmentation.</strong></p>
+        <p><strong>Ron Bronson is a service designer who works across complex organizations to untangle siloed delivery, slow decision-making, and system-wide fragmentation.</strong></p>
 
-<p>His work focuses on early-stage programs, public service transformation, and agile digital modernization. He has spent two decades advising agencies including the Federal Trade Commission, Centers for Medicare and Medicaid Services, and the U.S. Forest Service, as well as working with state & local governments. Previously, as Head of Design at 18F, he led the federal government's largest in-house human-centered design team.</p>
+        <p>His work focuses on early-stage programs, public service transformation, and agile digital modernization. He has spent two decades advising agencies including the Federal Trade Commission, Centers for Medicare and Medicaid Services, and the U.S. Forest Service, as well as working with state & local governments. Previously, as Head of Design at 18F, he led the federal government's largest in-house human-centered design team.</p>
 
-<p>Ron is an incoming <strong>Assistant Professor of Practice in Urban Technology</strong> at the University of Michigan Taubman College of Architecture and Urban Planning. He speaks internationally on service design, AI ethics, and tech's rapid influence on the erosion of civic life. He co-founded Portland Design Month, organized Design for the Public 24, and served as Board President of AIGA Portland.</p>
+        <p>Ron is an incoming <strong>Assistant Professor of Practice in Urban Technology</strong> at the University of Michigan Taubman College of Architecture and Urban Planning. He speaks internationally on service design, AI ethics, and tech's rapid influence on the erosion of civic life. He co-founded Portland Design Month, organized Design for the Public 24, and served as Board President of AIGA Portland.</p>
+        
         <p>He semi-regularly writes updates on his <a href="now.html">now-ish page.</a></p>
-	     
       </section>
 
       <div class="two-column-content">
@@ -62,18 +247,18 @@
 
       <section class="contact">
         <h2>Elsewhere</h2>
-       <ul class="social-list">
-  <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
-  <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
-  <li><a href="https://open.spotify.com/user/ronbronson?si=78c23e787a754317"><i class="fab fa-spotify"></i></a></li>
-  <li><a href="https://letterboxd.com/ronbronson/"><i class="fas fa-film"></i></a></li>
-  <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
-  <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
-  <li><a href="https://www.discogs.com/user/quarterback/collection"><i class="fas fa-record-vinyl"></i></a></li>
-  <li><a href="https://literal.club/ron"><i class="fas fa-book"></i></a></li>
-  <li><a href="mailto:contact@ronbronson.com"><i class="fas fa-envelope"></i></a></li>
-  <li><a href="/blogroll.html">Blogroll</a></li>
-</ul>
+        <ul class="social-list">
+          <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
+          <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
+          <li><a href="https://open.spotify.com/user/ronbronson?si=78c23e787a754317"><i class="fab fa-spotify"></i></a></li>
+          <li><a href="https://letterboxd.com/ronbronson/"><i class="fas fa-film"></i></a></li>
+          <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
+          <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
+          <li><a href="https://www.discogs.com/user/quarterback/collection"><i class="fas fa-record-vinyl"></i></a></li>
+          <li><a href="https://literal.club/ron"><i class="fas fa-book"></i></a></li>
+          <li><a href="mailto:contact@ronbronson.com"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="/blogroll.html">Blogroll</a></li>
+        </ul>
       </section>
     </main>
 
@@ -187,6 +372,7 @@
         `;
       }
     }
+
     async function loadRecentPosts() {
       try {
         const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.ronbronson.com/feed.rss');
@@ -237,14 +423,7 @@
     };
 
     function applyColorScheme(schemeName) {
-      const scheme = colorSchemes[schemeName];
-      if (!scheme) return;
-
-      document.documentElement.style.setProperty('--bg-color', scheme.bg);
-      document.documentElement.style.setProperty('--text-color', scheme.text);
-      document.documentElement.style.setProperty('--accent-color', scheme.accent);
-      document.documentElement.style.setProperty('--muted-color', scheme.muted);
-      
+      document.body.className = schemeName ? `scheme-${schemeName}` : '';
       localStorage.setItem('colorScheme', schemeName);
     }
 
