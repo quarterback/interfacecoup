@@ -1,8 +1,39 @@
-/* Import custom font files */
-@import url('mit-quailav-regular.css');
-@import url('mit-quailav-medium.css');
-@import url('mit-quailav-extra-bold.css');
-@import url('little-grandad-fat.css');
+/* Custom font declarations */
+@font-face {
+  font-family: 'MITQuailav-Regular';
+  src: url('/fonts/mit-quailav-regular.woff2') format('woff2'),
+       url('/fonts/mit-quailav-regular.woff') format('woff'),
+       url('/fonts/mit-quailav-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MITQuailav-Medium';
+  src: url('/fonts/mit-quailav-medium.woff2') format('woff2'),
+       url('/fonts/mit-quailav-medium.woff') format('woff'),
+       url('/fonts/mit-quailav-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MITQuailav-ExtraBold';
+  src: url('/fonts/mit-quailav-extra-bold.woff2') format('woff2'),
+       url('/fonts/mit-quailav-extra-bold.woff') format('woff'),
+       url('/fonts/mit-quailav-extra-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LittleGrandadFatRegular';
+  src: url('/fonts/little-grandad-fat.woff2') format('woff2'),
+       url('/fonts/little-grandad-fat.woff') format('woff'),
+       url('/fonts/little-grandad-fat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* CSS Custom Properties for theming */
 :root {
