@@ -1,0 +1,27 @@
+/*
+Font: 		Little Grandad Fat
+Style: 		Regular
+URL: 		https://youworkforthem.com/font/T29710/little-grandad
+Foundry: 	Jonathan  Storey
+Foundry: 	https://youworkforthem.com/designer/1579/jonathan-storey
+Copyright:	
+Version: 	17
+Created:	July 20, 2025
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'LittleGrandadFatRegular';
+	src: url('little-grandad-fat.eot');
+	src: url('little-grandad-fat.eot?#iefix') format('embedded-opentype'),
+             url('little-grandad-fat.woff2') format('woff2'),
+	     url('little-grandad-fat.woff') format('woff'),
+	     url('little-grandad-fat.ttf') format('truetype'),
+	     url('little-grandad-fat.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
