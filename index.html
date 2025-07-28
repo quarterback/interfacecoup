@@ -224,26 +224,22 @@
         <p>He semi-regularly writes updates on his <a href="now.html">now-ish page.</a></p>
       </section>
 
-      <div class="two-column-content">
-        <section class="recent-writing">
-          <h2>Recent writing</h2>
-          <ul id="blog-feed" class="post-list">
-            <li>Loading recent posts...</li>
-          </ul>
-        </section>
+ <!-- Recent Writing -->
+      <section class="section">
+        <h2>Recent Writing</h2>
+        <div id="blog-feed">
+          <p>Loading recent posts...</p>
+        </div>
+      </section>
 
-        <section class="live-content">
-          <h2>Now Reading</h2>
-          <div class="reading-feed" id="reading-feed">
-            <p>Loading recent reads...</p>
-          </div>
-          
-          <div class="music-widget">
-            <h3>Listening to</h3>
-            <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" alt="Recently played music from Last.fm" loading="lazy">
-          </div>
-        </section>
-      </div>
+            <!-- Music -->
+      <section class="section">
+        <h2>Currently Listening</h2>
+        <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" 
+             alt="Recently played music" 
+             loading="lazy" 
+             style="width: 100%; max-width: 400px; border-radius: 4px;">
+      </section>
 
       <section class="contact">
         <h2>Elsewhere</h2>
