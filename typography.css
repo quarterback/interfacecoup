@@ -263,6 +263,16 @@ li {
 }
 
 /* Color scheme variations */
+.scheme-newsprint {
+  --bg-primary: #fefdf5;
+  --bg-secondary: #f8f6eb;
+  --text-primary: #1e3a8a;
+  --text-secondary: #1d4ed8;
+  --text-muted: #64748b;
+  --accent: #1e40af;
+  --border: #e2e8f0;
+}
+
 .scheme-blue {
   --bg-primary: #fafafa;
   --bg-secondary: #f1f5f9;
@@ -282,6 +292,7 @@ li {
   --accent: #059669;
   --border: #d1d5db;
 }
+
 
 /* Responsive design */
 @media (max-width: 768px) {
