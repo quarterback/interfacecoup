@@ -36,15 +36,25 @@
         <p>He semi-regularly writes updates on his <a href="now.html">now-ish page.</a></p>
       </section>
 
- <!-- Recent Writing -->
+      <!-- Recent Writing -->
       <section class="section">
         <h2>Recent Writing</h2>
-        <div id="blog-feed">
-          <p>Loading recent posts...</p>
+        <ul id="blog-feed">
+          <li>Loading recent posts...</li>
+        </ul>
+      </section>
+
+      <!-- Currently Reading -->
+      <section class="section">
+        <h2>Currently Reading</h2>
+        <div id="reading-feed">
+          <div class="reading-item">
+            <p>Loading reading list...</p>
+          </div>
         </div>
       </section>
 
-            <!-- Music -->
+      <!-- Music -->
       <section class="section">
         <h2>Currently Listening</h2>
         <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" 
@@ -196,43 +206,17 @@
       }
     }
 
-    // Color scheme switching
-    const colorSchemes = {
-      'pink-dark': {
-        bg: '#2f0217',
-        text: '#fb74a9',
-        accent: '#fb74a9',
-        muted: '#a8527a'
-      },
-      'navy-yellow': {
-        bg: '#030712',
-        text: '#facc15',
-        accent: '#facc15',
-        muted: '#b8941f'
-      },
-      'purple-cream': {
-        bg: '#8d063c',
-        text: '#fefce4',
-        accent: '#fefce4',
-        muted: '#e5dfc7'
-      },
-      'brown-burgundy': {
-        bg: '#3a1f1f',
-        text: '#e0cb57',
-        accent: '#e0cb57',
-        muted: '#b8a045'
-      },
-      'teal-purple': {
-        bg: '#111d2e',
-        text: '#c3a8f5',
-        accent: '#c3a8f5',
-        muted: '#9b7dc7'
-      }
-    };
-
     function applyColorScheme(schemeName) {
-      document.body.className = schemeName ? `scheme-${schemeName}` : '';
-      localStorage.setItem('colorScheme', schemeName);
+      // Remove any existing scheme classes
+      document.body.className = '';
+      
+      // Apply new scheme if provided
+      if (schemeName) {
+        document.body.className = `scheme-${schemeName}`;
+      }
+      
+      // Save to localStorage
+      localStorage.setItem('colorScheme', schemeName || '');
     }
 
     // Initialize
@@ -240,9 +224,11 @@
       loadRecentPosts();
       loadReadingFeed();
       
-      // Load saved color scheme or use default
-      const savedScheme = localStorage.getItem('colorScheme') || 'pink-dark';
-      applyColorScheme(savedScheme);
+      // Load saved color scheme or use default (newsprint)
+      const savedScheme = localStorage.getItem('colorScheme');
+      if (savedScheme) {
+        applyColorScheme(savedScheme);
+      }
       
       // Color scheme buttons
       document.querySelectorAll('.scheme-btn').forEach(btn => {
