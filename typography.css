@@ -338,36 +338,45 @@ li {
   margin-bottom: 0;
 }
 
-/* Replace the existing event styles with this simpler version */
+/* Compact one-line events */
 .upcoming-event {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .event-item {
-  padding: var(--spacing-md) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--spacing-xs) 0;
   border-bottom: 1px solid var(--border);
+  font-size: 1rem;
 }
 
 .event-item:last-child {
   border-bottom: none;
 }
 
-.event-meta {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-xs);
+.event-main {
+  flex: 1;
 }
 
 .event-title {
-  font-family: var(--font-subheading);
-  font-size: 1.1rem;
   color: var(--text-primary);
-  margin-bottom: var(--spacing-xs);
+  margin-right: var(--spacing-md);
 }
 
-.event-details {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+.event-date {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
 }
 
 /* Color scheme selector */
