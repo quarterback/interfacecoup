@@ -7,7 +7,7 @@
   <meta name="description" content="Friends and folks from the internet Ron Bronson likes following.">
   <link rel="icon" href="/line.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/typography.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
@@ -65,7 +65,7 @@
       </section>
     </main>
 
-    <!-- Color scheme selector -->
+<!-- Color scheme selector -->
 <div class="color-schemes">
   <button class="scheme-btn" data-scheme="off-white">●</button>
   <button class="scheme-btn" data-scheme="pink-dark">●</button>
@@ -75,66 +75,5 @@
   <button class="scheme-btn" data-scheme="teal-purple">●</button>
 </div>
 
-  <script>
-    // Color scheme switching
-    const colorSchemes = {
-      'pink-dark': {
-        bg: '#2f0217',
-        text: '#fb74a9',
-        accent: '#fb74a9',
-        muted: '#a8527a'
-      },
-      'navy-yellow': {
-        bg: '#030712',
-        text: '#facc15',
-        accent: '#facc15',
-        muted: '#b8941f'
-      },
-      'purple-cream': {
-        bg: '#8d063c',
-        text: '#fefce4',
-        accent: '#fefce4',
-        muted: '#e5dfc7'
-      },
-      'brown-burgundy': {
-        bg: '#3a1f1f',
-        text: '#e0cb57',
-        accent: '#e0cb57',
-        muted: '#b8a045'
-      },
-      'teal-purple': {
-        bg: '#111d2e',
-        text: '#c3a8f5',
-        accent: '#c3a8f5',
-        muted: '#9b7dc7'
-      }
-    };
-
-    function applyColorScheme(schemeName) {
-      const scheme = colorSchemes[schemeName];
-      if (!scheme) return;
-
-      document.documentElement.style.setProperty('--bg-color', scheme.bg);
-      document.documentElement.style.setProperty('--text-color', scheme.text);
-      document.documentElement.style.setProperty('--accent-color', scheme.accent);
-      document.documentElement.style.setProperty('--muted-color', scheme.muted);
-      
-      localStorage.setItem('colorScheme', schemeName);
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      // Load saved color scheme or use default
-      const savedScheme = localStorage.getItem('colorScheme') || 'pink-dark';
-      applyColorScheme(savedScheme);
-      
-      // Color scheme buttons
-      document.querySelectorAll('.scheme-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          applyColorScheme(btn.dataset.scheme);
-        });
-      });
-    });
-  </script>
 </body>
 </html>
