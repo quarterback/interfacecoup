@@ -9,14 +9,13 @@
   <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
   <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
   <div class="container">
     <header class="header">
       <div class="name-stack">
-        <a href="/">
+        <a href="/" style="color: inherit; text-decoration: none;">
           <div class="name-line">RON</div>
           <div class="name-line">BRONSON</div>
         </a>
@@ -342,16 +341,36 @@
       </section>
     </main>
 
-<!-- Color scheme selector -->
-<div class="color-schemes">
-  <button class="scheme-btn" data-scheme="off-white">●</button>
-  <button class="scheme-btn" data-scheme="pink-dark">●</button>
-  <button class="scheme-btn" data-scheme="navy-yellow">●</button>
-  <button class="scheme-btn" data-scheme="purple-cream">●</button>
-  <button class="scheme-btn" data-scheme="brown-burgundy">●</button>
-  <button class="scheme-btn" data-scheme="teal-purple">●</button>
-</div>
-  </div>
+    <!-- Color scheme selector -->
+    <div class="color-schemes">
+      <button class="scheme-btn" data-scheme="off-white">●</button>
+      <button class="scheme-btn" data-scheme="pink-dark">●</button>
+      <button class="scheme-btn" data-scheme="navy-yellow">●</button>
+      <button class="scheme-btn" data-scheme="purple-cream">●</button>
+      <button class="scheme-btn" data-scheme="brown-burgundy">●</button>
+      <button class="scheme-btn" data-scheme="teal-purple">●</button>
+    </div>
 
+    <script>
+      function applyColorScheme(schemeName) {
+        document.body.className = schemeName ? `scheme-${schemeName}` : '';
+        localStorage.setItem('colorScheme', schemeName);
+      }
+
+      // Initialize
+      document.addEventListener('DOMContentLoaded', () => {
+        const savedScheme = localStorage.getItem('colorScheme');
+        if (savedScheme) {
+          applyColorScheme(savedScheme);
+        }
+        
+        document.querySelectorAll('.scheme-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            applyColorScheme(btn.dataset.scheme);
+          });
+        });
+      });
+    </script>
+  </div>
 </body>
 </html>
