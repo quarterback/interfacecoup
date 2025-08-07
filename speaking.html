@@ -353,59 +353,5 @@
 </div>
   </div>
 
-  <script>
-    // Color scheme switching
-    const colorSchemes = {
-      'pink-dark': {
-        bg: '#2f0217',
-        text: '#fb74a9',
-        accent: '#fb74a9',
-        muted: '#a8527a'
-      },
-      'navy-yellow': {
-        bg: '#030712',
-        text: '#facc15',
-        accent: '#facc15',
-        muted: '#b8941f'
-      },
-      'purple-cream': {
-        bg: '#8d063c',
-        text: '#fefce4',
-        accent: '#fefce4',
-        muted: '#e5dfc7'
-      },
-      'brown-burgundy': {
-        bg: '#3a1f1f',
-        text: '#e0cb57',
-        accent: '#e0cb57',
-        muted: '#b8a045'
-      },
-      'teal-purple': {
-        bg: '#111d2e',
-        text: '#c3a8f5',
-        accent: '#c3a8f5',
-        muted: '#9b7dc7'
-      }
-    };
-
-    function applyColorScheme(schemeName) {
-      document.body.className = schemeName ? `scheme-${schemeName}` : '';
-      localStorage.setItem('colorScheme', schemeName);
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      // Load saved color scheme or use default
-      const savedScheme = localStorage.getItem('colorScheme') || 'pink-dark';
-      applyColorScheme(savedScheme);
-      
-      // Color scheme buttons
-      document.querySelectorAll('.scheme-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          applyColorScheme(btn.dataset.scheme);
-        });
-      });
-    });
-  </script>
 </body>
 </html>
