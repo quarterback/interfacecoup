@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now | Ron Bronson</title>
+  <meta name="description" content="What Ron Bronson is working on now-ish.">
+  <link rel="icon" href="/line.svg" type="image/svg+xml">
+  
+  <!-- Custom Typography CSS -->
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="name-stack">
+        <a href="/" style="color: inherit; text-decoration: none;">
+          <div class="name-line">RON</div>
+          <div class="name-line">BRONSON</div>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="/speaking.html">Media</a>
+        <a href="/tennis.html">Coaching</a>
+        <a href="https://blog.ronbronson.com">Blog</a>
+        <a href="https://tensilefutures.com">Work</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Now-ish</h2>
+        <p class="last-updated">Last updated: August 6, 2025</p>
+      </section>
+
+      <section class="now-content">
+        <p>
+          My term as President of AIGA Portland ended on June 30th. I'm excited for the new board to make their mark on the community, and I'll still be around both as President Emeritus (an ex-oficio board seat) and helping with Portland Design Month this October.
+        </p>
+        
+        <p>
+          I'll be speaking later this summer at events in Seattle, Oslo, Barcelona & Helsinki on a variety of topics ranging from tech & civic life, the fraying of social bonds & the influences of hype.
+        </p>
+        
+        <p>
+          Since my last update, the summer has been very busy. I attended Config in San Francisco (thanks to my buddy Andy hooking me up with a ticket) and Code for America Summit in DC back in May, the latter where I moderated a panel with some former 18F colleagues about our experience in the wake of the demolition of 18F.gov, the pioneering digital services office where I spent over 7 years.
+        </p>
+        
+        <p>
+          The other big thing I did this summer was sunset the <a href="https://digitalcorpspdx.org">Portland Digital Corps</a>, a sprint-like civic tech project I launched back in March. You can see our final decks on our website, but thanks to over fifty volunteers and six local non-profits, I think the little project was a success. Not everything has to be measured in massive story arcs, sometimes, you just get to make short-term wins that help your community.
+        </p>
+        
+        <p>
+          Tennis season ended in May and my top doubles team won the 4A-1A Girls State title. As a team we finished 4th. Every year, I have a sense of the landscape of the field around the state and not unlike other sports, you can prepare for all sorts of outcomes but you can't predict what's going to happen at State and this year was no exception. I'm extremely proud of the entire team, we've been in a bit of a transition for the past few years and it's difficult to get onto the podium, as there are lots of talented teams around the state. They capped a 17-0 season as a doubles pairing, and I'm excited to see what they do as seniors.
+        </p>
+      </section>
+
+      <section class="section archive-section">
+        <h3>Archived now pages</h3>
+        <div class="archive-list">
+          <div class="archive-item">
+            <a href="/now-may-2025.html">May 2025</a>
+            <span class="archive-date">May 5, 2025</span>
+          </div>
+          <!-- Add more archived items as needed -->
+        </div>
+      </section>
+
+      <section class="contact section">
+        <h2>Elsewhere</h2>
+        <ul class="social-list">
+          <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
+          <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
+          <li><a href="https://letterboxd.com/ronbronson/"><i class="fas fa-film"></i></a></li>
+          <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
+          <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
+          <li><a href="mailto:contact@ronbronson.com"><i class="fas fa-envelope"></i></a></li>
+          <li><a href="/blogroll.html">Blogroll</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>This is a <a href="https://nownownow.com/about">now page</a>, inspired by <a href="https://vaughntan.org/now-ish">Vaughn Tan's now-ish approach</a>. The idea is to share what I'm focused on at this point in my life.</p>
+    </footer>
+
+    <!-- Color scheme selector -->
+    <div class="color-schemes">
+      <button class="scheme-btn" data-scheme="off-white">●</button>
+      <button class="scheme-btn" data-scheme="pink-dark">●</button>
+      <button class="scheme-btn" data-scheme="navy-yellow">●</button>
+      <button class="scheme-btn" data-scheme="purple-cream">●</button>
+      <button class="scheme-btn" data-scheme="brown-burgundy">●</button>
+      <button class="scheme-btn" data-scheme="teal-purple">●</button>
+    </div>
+  </div>
+
+  <script>
+    function applyColorScheme(schemeName) {
+      document.body.className = schemeName ? `scheme-${schemeName}` : '';
+      localStorage.setItem('colorScheme', schemeName);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedScheme = localStorage.getItem('colorScheme');
+      if (savedScheme) {
+        applyColorScheme(savedScheme);
+      }
+      
+      document.querySelectorAll('.scheme-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyColorScheme(btn.dataset.scheme);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
