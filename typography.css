@@ -744,6 +744,13 @@ li {
   height: 20px;
 }
 
+.site-footer .colophon {
+  font-size: 0.75rem;
+  margin-top: var(--spacing-sm);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 768px) {
   .archive-item {
     flex-direction: column;
