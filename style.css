@@ -225,6 +225,17 @@ a {
   transition: border-bottom-color 0.2s ease;
 }
 
+/* Now page content links - always underlined for visibility */
+.now-content a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.now-content a:hover {
+  border-bottom-color: transparent;
+}
+
 a:hover {
   border-bottom-color: var(--accent-color);
 }
