@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working Philosophy | Ron Bronson</title>
+  <meta name="description" content="Ron Bronson's approach to building delivery systems for government and leading transformation work.">
+  <link rel="icon" href="/line.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="name-stack">
+        <a href="/">
+          <div class="name-line">RON</div>
+          <div class="name-line">BRONSON</div>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="/speaking.html">Media</a>
+        <a href="/tennis.html">Coaching</a>
+        <a href="https://blog.ronbronson.com">Blog</a>
+        <a href="https://tensilefutures.com">Work</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>How I Work</h2>
+        <p>[Opening paragraph about your approach to work - your overall philosophy]</p>
+      </section>
+
+      <div class="work-category section">
+        <h3>Projects I've Done</h3>
+        <p>[Introductory paragraph about the types of projects]</p>
+        <ul>
+          <li>[Project example 1]</li>
+          <li>[Project example 2]</li>
+          <li>[Project example 3]</li>
+          <li>[Project example 4]</li>
+        </ul>
+      </div>
+
+      <div class="work-category section">
+        <h3>The Work I Like to Do</h3>
+        <p>[Description of the kind of work that energizes you and why]</p>
+        <ul>
+          <li>[Type of work 1]</li>
+          <li>[Type of work 2]</li>
+          <li>[Type of work 3]</li>
+        </ul>
+      </div>
+
+      <div class="work-category section">
+        <h3>Where I Can Be Most Useful Right Now</h3>
+        <p>[Current focus and where you see yourself adding the most value]</p>
+        <ul>
+          <li>[Area of usefulness 1]</li>
+          <li>[Area of usefulness 2]</li>
+          <li>[Area of usefulness 3]</li>
+        </ul>
+      </div>
+
+      <div class="work-category section">
+        <h3>Related Writing</h3>
+        <ul>
+          <li><a href="https://blog.ronbronson.com" target="_blank">[Link to relevant blog post]</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <section class="section">
+      <h2>Elsewhere</h2>
+      <ul class="social-list">
+        <li><a href="https://bsky.app/profile/ronbronson.com"><i class="fa-solid fa-cloud"></i></a></li>
+        <li><a href="https://last.fm/user/statechampion"><i class="fab fa-lastfm"></i></a></li>
+        <li><a href="https://open.spotify.com/user/ronbronson?si=78c23e787a754317"><i class="fab fa-spotify"></i></a></li>
+        <li><a href="https://letterboxd.com/ronbronson/"><i class="fas fa-film"></i></a></li>
+        <li><a href="https://music.apple.com/profile/ronbronson"><i class="fab fa-apple"></i></a></li>
+        <li><a href="https://www.mixcloud.com/908RB/"><i class="fab fa-mixcloud"></i></a></li>
+        <li><a href="https://www.discogs.com/user/quarterback/collection"><i class="fas fa-record-vinyl"></i></a></li>
+        <li><a href="https://literal.club/ron"><i class="fas fa-book"></i></a></li>
+        <li><a href="mailto:contact@ronbronson.com"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="/blogroll.html">Blogroll</a></li>
+      </ul>
+    </section>
+
+    <!-- Color scheme selector -->
+    <div class="color-schemes">
+      <button class="scheme-btn" data-scheme="off-white">●</button>
+      <button class="scheme-btn" data-scheme="pink-dark">●</button>
+      <button class="scheme-btn" data-scheme="navy-yellow">●</button>
+      <button class="scheme-btn" data-scheme="purple-cream">●</button>
+      <button class="scheme-btn" data-scheme="brown-burgundy">●</button>
+      <button class="scheme-btn" data-scheme="teal-purple">●</button>
+    </div>
+  </div>
+
+  <script>
+    function applyColorScheme(schemeName) {
+      document.body.className = schemeName ? `scheme-${schemeName}` : '';
+      localStorage.setItem('colorScheme', schemeName);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedScheme = localStorage.getItem('colorScheme');
+      if (savedScheme) {
+        applyColorScheme(savedScheme);
+      }
+
+      document.querySelectorAll('.scheme-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyColorScheme(btn.dataset.scheme);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
