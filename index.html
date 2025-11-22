@@ -21,20 +21,39 @@
       <nav class="nav">
         <a href="/speaking.html">Speaking</a>
         <a href="/tennis.html">Coaching</a>
+        <a href="/work-philosophy.html">Work</a>
         <a href="https://blog.ronbronson.com">Blog</a>
         <a href="mailto:bronsonr@umich.edu">Contact</a>
       </nav>
     </header>
 
     <main>
-<section class="intro"> 
+<section class="intro">
 
-<p>I build delivery systems for government—modernizing legacy platforms, leading teams through complex transformation, and shipping services that work for millions of people. I currently serve as an Assistant Professor of Practice in Urban Technology at the University of Michigan, and previously as Head of Design at 18F.gov and President of AIGA Portland.</p>
-
-<p>Somehow I make time for a radio show on <a href="https://www.mixcloud.com/908RB/">KFFP-FM</a>, coaching <a href="https://www.oregonlive.com/highschoolsports/2022/05/catlin-gabel-sweeps-class-4a3a2a1a-tennis-team-titles.html">high school tennis</a> for nearly a decade, and being North America's <a href="https://www.superpesis.fi/ajankohtaista/superpesis-yhdysvaltalainen-ron-bronson-toteutti-unelmansa-ja-matkusti-suomeen-katsomaan-pesapalloa">most enthusiastic ambassador for the Finnish baseball variant, Pesäpallo.</a></p>
-  
 </section>
 <p>I occasionally share updates on my <a href="now.html">now-ish page</a>.</p>
+
+<!-- Two-column layout for Music and Books -->
+<div class="two-column-content">
+  <!-- Currently Listening -->
+  <section class="section">
+    <h2>Currently Listening</h2>
+    <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion"
+         alt="Recently played music"
+         loading="lazy"
+         style="width: 100%; max-width: 400px; border-radius: 4px;">
+  </section>
+
+  <!-- Currently Reading -->
+  <section class="section">
+    <h2>Currently Reading</h2>
+    <div id="reading-feed">
+      <div class="reading-item">
+        <p>Loading reading list...</p>
+      </div>
+    </div>
+  </section>
+</div>
 
 
 <section class="section">
@@ -77,25 +96,6 @@
         <ul id="blog-feed">
           <li>Loading recent posts...</li>
         </ul>
-      </section>
-
-      <!-- Currently Reading
-      <section class="section">
-        <h2>Currently Reading</h2>
-        <div id="reading-feed">
-          <div class="reading-item">
-            <p>Loading reading list...</p>
-          </div>
-        </div>
-      </section>  -->
-
-      <!-- Music -->
-      <section class="section">
-        <h2>Currently Listening</h2>
-        <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion" 
-             alt="Recently played music" 
-             loading="lazy" 
-             style="width: 100%; max-width: 400px; border-radius: 4px;">
       </section>
 
       <section class="contact">
@@ -269,14 +269,14 @@
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       loadRecentPosts();
-      loadReadingFeed();
-      
+      loadReadingFeed(); // Now active!
+
       // Load saved color scheme or use default (newsprint)
       const savedScheme = localStorage.getItem('colorScheme');
       if (savedScheme) {
         applyColorScheme(savedScheme);
       }
-      
+
       // Color scheme buttons
       document.querySelectorAll('.scheme-btn').forEach(btn => {
         btn.addEventListener('click', () => {

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tennis & Performance Leadership | Ron Bronson</title>
-  <meta name="description" content="Ron Bronson brings leadership, analytics, and systems thinking to tennis coaching and sports performance consulting.">
+  <title>Working Philosophy | Ron Bronson</title>
+  <meta name="description" content="Ron Bronson's approach to building delivery systems for government and leading transformation work.">
   <link rel="icon" href="/line.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://unpkg.com/@unocss/reset/normalize.css">
   <link rel="stylesheet" href="typography.css">
@@ -31,20 +31,47 @@
 
     <main>
       <section class="intro">
-        <h2>Tennis & Performance Leadership</h2>
+        <h2>How I Work</h2>
+        <p>[Opening paragraph about your approach to work - your overall philosophy]</p>
       </section>
 
+      <div class="work-category section">
+        <h3>Projects I've Done</h3>
+        <p>[Introductory paragraph about the types of projects]</p>
+        <ul>
+          <li>[Project example 1]</li>
+          <li>[Project example 2]</li>
+          <li>[Project example 3]</li>
+          <li>[Project example 4]</li>
+        </ul>
+      </div>
 
-  <div class="work-category section">
-    <h3>Reflections on Coaching</h3>
-    <ul>
-      <li><a href="https://blog.ronbronson.com/why-i-keep-coaching" target="_blank">Why I Keep Coaching</a> (May 2023)</li>
-     <li><a href="https://blog.ronbronson.com/motivating-or-setting-realistic-goals-when-your-team-loses-a-lot" target="_blank">Motivating (or Setting Realistic Goals When Your Team Loses a Lot)</a> (Jan. 2023)</li>
-      <li><a href="https://blog.ronbronson.com/on-lineups-ladders-high-school-tennis" target="_blank">On Lineups, Ladders & High School Tennis</a> (Dec. 2021)</li>
-      <li><a href="https://blog.ronbronson.com/naming-the-courts" target="_blank">Naming the Courts</a> (June 2015)</li>
-    </ul>
-  </div>
-      </section>
+      <div class="work-category section">
+        <h3>The Work I Like to Do</h3>
+        <p>[Description of the kind of work that energizes you and why]</p>
+        <ul>
+          <li>[Type of work 1]</li>
+          <li>[Type of work 2]</li>
+          <li>[Type of work 3]</li>
+        </ul>
+      </div>
+
+      <div class="work-category section">
+        <h3>Where I Can Be Most Useful Right Now</h3>
+        <p>[Current focus and where you see yourself adding the most value]</p>
+        <ul>
+          <li>[Area of usefulness 1]</li>
+          <li>[Area of usefulness 2]</li>
+          <li>[Area of usefulness 3]</li>
+        </ul>
+      </div>
+
+      <div class="work-category section">
+        <h3>Related Writing</h3>
+        <ul>
+          <li><a href="https://blog.ronbronson.com" target="_blank">[Link to relevant blog post]</a></li>
+        </ul>
+      </div>
     </main>
 
     <section class="section">
@@ -73,5 +100,26 @@
       <button class="scheme-btn" data-scheme="teal-purple">●</button>
     </div>
   </div>
+
+  <script>
+    function applyColorScheme(schemeName) {
+      document.body.className = schemeName ? `scheme-${schemeName}` : '';
+      localStorage.setItem('colorScheme', schemeName);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedScheme = localStorage.getItem('colorScheme');
+      if (savedScheme) {
+        applyColorScheme(savedScheme);
+      }
+
+      document.querySelectorAll('.scheme-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyColorScheme(btn.dataset.scheme);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
