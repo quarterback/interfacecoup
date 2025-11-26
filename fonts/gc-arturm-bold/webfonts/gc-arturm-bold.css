@@ -1,0 +1,27 @@
+/*
+Font: 		GC arturm
+Style: 		Bold
+URL: 		https://youworkforthem.com/font/T31340/gc-arturm
+Foundry: 	Glyphonic
+Foundry: 	https://youworkforthem.com/designer/2170/glyphonic
+Copyright:	
+Version: 	17
+Created:	November 06, 2025
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'GCarturm-Bold';
+	src: url('gc-arturm-bold.eot');
+	src: url('gc-arturm-bold.eot?#iefix') format('embedded-opentype'),
+             url('gc-arturm-bold.woff2') format('woff2'),
+	     url('gc-arturm-bold.woff') format('woff'),
+	     url('gc-arturm-bold.ttf') format('truetype'),
+	     url('gc-arturm-bold.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
