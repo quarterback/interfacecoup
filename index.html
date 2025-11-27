@@ -43,70 +43,62 @@
 <p>I occasionally shares updates on my <a href="now.html">now-ish page</a>.</p>
 
 
-<!-- Two-column layout for Music and Books -->
-<div class="two-column-content">
-  <!-- Currently Listening -->
-  <section class="section">
-    <h2>Currently Listening</h2>
-    <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion"
-         alt="Recently played music"
-         loading="lazy"
-         style="width: 100%; max-width: 400px; border-radius: 4px;">
-  </section>
+<!-- Sidequests Grid -->
+<section class="sidequests">
+  <div class="sidequests-grid">
+    
+    <!-- Currently Listening Card -->
+    <div class="sidequest-card sidequest-listening">
+      <h3>Currently Listening</h3>
+      <img src="https://lastfm-recently-played.vercel.app/api?user=statechampion"
+           alt="Recently played music"
+           loading="lazy"
+           class="lastfm-widget">
+    </div>
 
-  <!-- Currently Reading -->
-  <section class="section">
-    <h2>Currently Reading</h2>
-    <div id="reading-feed">
-      <div class="reading-item">
-        <p>Loading reading list...</p>
+    <!-- Currently Reading Card -->
+    <div class="sidequest-card sidequest-reading">
+      <h3>Currently Reading</h3>
+      <div id="reading-feed">
+        <div class="reading-item">
+          <p>Loading reading list...</p>
+        </div>
       </div>
     </div>
-  </section>
-</div>
 
-
-<section class="section">
-  <h2>Upcoming</h2>
-  <div class="upcoming-events">
-
-    <div class="event-item">
-      <span class="event-title">
-        <a href="https://dotgovdesign.org/">DotGov Design (AIGA DC)</a>
-      </span>
-      <span class="event-date">November 4, 2025 · Washington, D.C.</span>
+    <!-- Upcoming Events Card -->
+    <div class="sidequest-card sidequest-events">
+      <h3>Upcoming</h3>
+      <div class="events-list">
+        <div class="event-item">
+          <a href="https://dotgovdesign.org/">DotGov Design (AIGA DC)</a>
+          <span class="event-date">Nov 4 · Washington, D.C.</span>
+        </div>
+        <div class="event-item">
+          <a href="https://cugos.org/2025-fall-fling/">CUGOS Fall Fling</a>
+          <span class="event-date">Nov 14 · Seattle, WA</span>
+        </div>
+        <div class="event-item">
+          <a href="https://throughlineconf.com/">Throughline Conference</a>
+          <span class="event-date">Jan 29–30 · Online</span>
+        </div>
+        <div class="event-item">
+          <span class="event-title-text">Years Ahead</span>
+          <span class="event-date">Spring 2026</span>
+        </div>
+      </div>
     </div>
 
-    <div class="event-item">
-      <span class="event-title">
-        <a href="https://cugos.org/2025-fall-fling/">CUGOS Fall Fling</a>
-      </span>
-      <span class="event-date">November 14, 2025 · Seattle, WA</span>
-    </div>
-
-    <div class="event-item">
-      <span class="event-title">
-        <a href="https://throughlineconf.com/">Throughline Conference</a>
-      </span>
-      <span class="event-date">January 29–30, 2026 · Online</span>
-    </div>
-
-    <div class="event-item">
-      <span class="event-title">Years Ahead</span>
-      <span class="event-date">Spring 2026</span>
+    <!-- Recent Writing Card -->
+    <div class="sidequest-card sidequest-writing">
+      <h3>Recent Writing</h3>
+      <ul id="blog-feed">
+        <li>Loading recent posts...</li>
+      </ul>
     </div>
 
   </div>
 </section>
-
-
-      <!-- Recent Writing -->
-      <section class="section">
-        <h2>Recent Writing</h2>
-        <ul id="blog-feed">
-          <li>Loading recent posts...</li>
-        </ul>
-      </section>
 
       <section class="contact">
 
