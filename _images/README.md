@@ -6,6 +6,9 @@ This directory contains images used throughout the site for speaking engagements
 
 ```
 _images/
+├── header/          # Site header and hero images
+├── about/           # About page biography photos
+├── coaching/        # Tennis coaching and season photos
 ├── speaking/        # Speaking engagement photos
 │   └── [event-slug]/   # Individual event folders
 ├── events/          # Event and conference photos
@@ -21,6 +24,7 @@ Use lowercase with hyphens for all file and folder names:
 - **Event folders**: `YYYY-MM-event-name/` (e.g., `2024-10-design-for-public/`)
 - **Image files**: `descriptive-name.jpg` (e.g., `keynote-presentation.jpg`)
 - **Numbered sequences**: `event-name-01.jpg`, `event-name-02.jpg`
+- **Season photos**: `YYYY-season-description.jpg` (e.g., `2024-spring-team-photo.jpg`)
 
 ## Recommended Image Sizes
 
