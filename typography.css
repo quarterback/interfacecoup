@@ -900,3 +900,155 @@ li {
   }
 }
 }
+
+/* ==========================================================================
+   Photo Integration Styles
+   ========================================================================== */
+
+/* Hero/accent images */
+.accent-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Inline photo with caption */
+.photo-block {
+  margin: var(--spacing-xl) 0;
+}
+
+.photo-block img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.photo-caption {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: var(--spacing-xs);
+}
+
+/* Photo grid for events/projects */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* Float photo to side (for speaking pics, headshots) */
+.photo-aside {
+  float: right;
+  max-width: 300px;
+  margin: 0 0 var(--spacing-md) var(--spacing-lg);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .photo-aside {
+    float: none;
+    max-width: 100%;
+    margin: var(--spacing-md) 0;
+  }
+}
+
+/* Full-width hero image */
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Photo with overlay text (for event headers) */
+.photo-header {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.photo-header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo-header-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg);
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  border-radius: 0 0 8px 8px;
+}
+
+.photo-header-overlay h1,
+.photo-header-overlay h2 {
+  color: #fff;
+  margin: 0;
+}
+
+/* Thumbnail gallery */
+.thumbnail-gallery {
+  display: flex;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+}
+
+.thumbnail-gallery img {
+  height: 100px;
+  width: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+  opacity: 0.8;
+}
+
+/* Clearfix utility for float clearing */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Intro lead text */
+.intro-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+/* CTA link style */
+.cta-link {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: var(--spacing-sm) 0;
+  transition: all 0.2s ease;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
