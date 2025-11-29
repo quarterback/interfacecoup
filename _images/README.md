@@ -55,6 +55,7 @@ The following CSS classes are available for photo integration:
 | `.photo-header` | Container for hero image with text overlay |
 | `.photo-header-overlay` | Gradient overlay with white text |
 | `.thumbnail-gallery` | Horizontal scrolling thumbnail strip |
+| `.clearfix` | Utility class to clear floats (use with `.photo-aside`) |
 
 ## Usage Examples
 
@@ -87,9 +88,10 @@ The following CSS classes are available for photo integration:
 
 ### Floating Aside Image
 ```html
-<img class="photo-aside" src="/_images/headshots/speaker.jpg" alt="Speaker photo">
-<p>Body text wraps around the image on desktop...</p>
-<div style="clear: both;"></div>
+<section class="clearfix">
+  <img class="photo-aside" src="/_images/headshots/speaker.jpg" alt="Speaker photo">
+  <p>Body text wraps around the image on desktop...</p>
+</section>
 ```
 
 ## Optimization Tips

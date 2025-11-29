@@ -1024,3 +1024,10 @@ li {
 .thumbnail-gallery img:hover {
   opacity: 0.8;
 }
+
+/* Clearfix utility for float clearing */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
