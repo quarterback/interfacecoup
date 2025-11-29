@@ -1031,3 +1031,24 @@ li {
   display: table;
   clear: both;
 }
+
+/* Intro lead text */
+.intro-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+/* CTA link style */
+.cta-link {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: var(--spacing-sm) 0;
+  transition: all 0.2s ease;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
